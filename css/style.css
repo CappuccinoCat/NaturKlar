@@ -300,7 +300,7 @@ button, a {
 .site-navigation__link:hover {
     color: var(--color-ochre);
 }
-/* Figma bruger lys okker i linktilstande; oliven giver AA-kontrast på beige. */
+/
 .site-navigation__link[aria-current="page"], .site-navigation__link:active {
     color: var(--color-olive);
 }
