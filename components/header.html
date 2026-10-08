@@ -1,0 +1,30 @@
+<!-- Stierne er relative til siden i projektets rod, som indlæser komponenten. -->
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="brand" href="index.html" aria-label="NaturKlar – Hjem">NaturKlar<span class="brand__dot">.</span></a>
+        <nav class="site-navigation" aria-label="Hovednavigation">
+            <a class="site-navigation__link" href="begynderguide.html">Begynderguide</a>
+            <a class="site-navigation__link" href="planlaeg-tur.html">Planlæg din første tur</a>
+            <a class="site-navigation__link" href="pakkeliste.html">Pakkeliste til sheltertur</a>
+            <a class="site-navigation__link" href="gode-raad.html">Gode råd</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobile-menu">
+            <img src="assets/icons/menu.svg" width="32" height="32" alt="">
+        </button>
+    </div>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Hovedmenu">
+        <div class="mobile-menu__top">
+            <a class="brand" href="index.html" aria-label="NaturKlar – Hjem">NaturKlar<span class="brand__dot">.</span></a>
+            <button class="menu-toggle" type="button" data-menu-close aria-label="Luk menu" autofocus>
+                <img src="assets/icons/luk-menu.svg" width="32" height="32" alt="">
+            </button>
+        </div>
+        <nav class="mobile-menu__navigation" aria-label="Mobilnavigation">
+            <a class="site-navigation__link" href="index.html">Hjem</a>
+            <a class="site-navigation__link" href="begynderguide.html">Begynderguide</a>
+            <a class="site-navigation__link" href="planlaeg-tur.html">Planlæg din første tur</a>
+            <a class="site-navigation__link" href="pakkeliste.html">Pakkeliste til sheltertur</a>
+            <a class="site-navigation__link" href="gode-raad.html">Gode råd</a>
+        </nav>
+    </dialog>
+</header>

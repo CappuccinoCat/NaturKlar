@@ -2,9 +2,137 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>NaturKlar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Din første vandretur med overnatning i naturen behøver ikke være kompliceret. Vælg en kort rute, start med lidt udstyr og udvid, når du tager på flere ture.">
+    <title>NaturKlar – Friluftsliv for begyndere</title>
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/atkinson-hyperlegible-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#hero-heading">Spring til indhold</a>
+    <div data-component="header"></div>
 
+    <main id="indhold">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero__background" aria-hidden="true"></div>
+            <div class="container hero__content">
+                <p class="eyebrow">Friluftsliv for begyndere</p>
+                <h1 class="hero__heading" id="hero-heading" tabindex="-1">Bliv klar til<br class="mobile-label"> din første<br class="desktop-label"> nat<br class="mobile-label"> i <span class="hero__accent">naturen.</span></h1>
+                <p class="hero__description">Din første vandretur med overnatning i naturen behøver ikke være kompliceret. Vælg en kort rute, start med lidt udstyr og udvid, når du tager på flere ture.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="begynderguide.html">Bliv klar til naturen på 3 trin</a>
+                    <a class="btn btn--secondary" href="pakkeliste.html"><span class="desktop-label">Se pakkeliste</span><span class="mobile-label">Åbn pakkelisten</span></a>
+                </div>
+            </div>
+            <div class="section-edge section-edge--hero" aria-hidden="true"></div>
+        </section>
+
+        <section class="how-it-works" aria-labelledby="intro-heading">
+            <div class="container how-it-works__layout">
+                <img class="how-it-works__image" src="assets/images/kaffe-ved-baalet.jpg" width="801" height="1200" alt="Kaffekande og kop ved et lille bål på en træstub." loading="lazy">
+                <div class="how-it-works__content">
+                    <div class="section-heading">
+                        <p class="eyebrow">Vandring med overnatning</p>
+                        <h2 id="intro-heading">Start enkelt og lær undervejs</h2>
+                    </div>
+                    <ol class="steps">
+                        <li class="icon-card">
+                            <span class="icon-card__number" aria-hidden="true">1</span>
+                            <div class="icon-card__content">
+                                <h3 class="icon-card__heading">Start med det vigtigste</h3>
+                                <p>Som begynder er det en god idé at starte enkelt og fokusere på det mest nødvendige udstyr. Du behøver ikke købe alt fra starten.</p>
+                            </div>
+                        </li>
+                        <li class="icon-card">
+                            <span class="icon-card__number" aria-hidden="true">2</span>
+                            <div class="icon-card__content">
+                                <h3 class="icon-card__heading">Prøv udstyret, før du køber</h3>
+                                <p>Overvej at låne eller leje det dyre udstyr til dine første vandreture.</p>
+                            </div>
+                        </li>
+                        <li class="icon-card">
+                            <span class="icon-card__number" aria-hidden="true">3</span>
+                            <div class="icon-card__content">
+                                <h3 class="icon-card__heading">Vælg en rute nær hjemmet</h3>
+                                <p>Find et shelter tæt på hjemmet. Første tur kan være én nat med en nem vej tilbage.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="guides container" aria-labelledby="guides-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Sådan gør du</p>
+                <h2 id="guides-heading">Bliv klar på 3 trin</h2>
+            </div>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <div class="guide-card__image guide-card__image--walking">
+                        <img src="assets/images/vandring-for-begyndere.png" width="1536" height="1024" alt="To vandrere med rygsække på en skovsti." loading="lazy">
+                    </div>
+                    <span class="guide-card__badge" aria-hidden="true"><img src="assets/icons/kort-cirkel.svg" width="60" height="60" alt=""><img class="guide-card__badge-icon" src="assets/icons/fodspor.svg" width="21" height="22" alt=""></span>
+                    <div class="guide-card__content">
+                        <div class="guide-card__heading">
+                            <p class="eyebrow">Trin 1: Forstå</p>
+                            <h3>Begynderguide</h3>
+                        </div>
+                        <p>Sådan kan en nat ude foregå, når du er ny i friluftsliv.</p>
+                        <a class="text-link guide-card__link" href="begynderguide.html">Start her<img class="icon" src="assets/icons/pil-hoejre.svg" width="24" height="24" alt=""></a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="guide-card__image">
+                        <img src="assets/images/planlaeg-turen.jpg" width="1400" height="933" alt="To personer undersøger et kort ved et telt." loading="lazy">
+                    </div>
+                    <span class="guide-card__badge" aria-hidden="true"><img src="assets/icons/kort-cirkel.svg" width="60" height="60" alt=""><img class="guide-card__badge-icon" src="assets/icons/fodspor.svg" width="21" height="22" alt=""></span>
+                    <div class="guide-card__content">
+                        <div class="guide-card__heading">
+                            <p class="eyebrow">Trin 2: Planlæg</p>
+                            <h3>Planlæg turen</h3>
+                        </div>
+                        <p>Find et shelter nær dig, book det, og forbered en rute.</p>
+                        <a class="text-link guide-card__link" href="planlaeg-tur.html">Planlæg turen<img class="icon" src="assets/icons/pil-hoejre.svg" width="24" height="24" alt=""></a>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <div class="guide-card__image guide-card__image--packing">
+                        <img src="assets/images/pak-udstyret.png" width="1536" height="1024" alt="En gul rygsæk og udstyr lagt frem på skovbunden." loading="lazy">
+                    </div>
+                    <span class="guide-card__badge" aria-hidden="true"><img src="assets/icons/kort-cirkel.svg" width="60" height="60" alt=""><img class="guide-card__badge-icon" src="assets/icons/fodspor.svg" width="21" height="22" alt=""></span>
+                    <div class="guide-card__content">
+                        <div class="guide-card__heading">
+                            <p class="eyebrow">Trin 3: pak</p>
+                            <h3>Pak udstyret smart</h3>
+                        </div>
+                        <p>Se det nødvendige til én overnatning. Kryds af mens du pakker.</p>
+                        <a class="text-link guide-card__link" href="pakkeliste.html">Se pakkeliste<img class="icon" src="assets/icons/pil-hoejre.svg" width="24" height="24" alt=""></a>
+                    </div>
+                </article>
+            </div>
+            <p class="guides__advice">Har du været afsted? <a class="text-link" href="gode-raad.html">Læs gode råd og typiske begynderfejl<img class="icon" src="assets/icons/pil-hoejre.svg" width="24" height="24" alt=""></a></p>
+        </section>
+
+        <section class="first-trip" aria-labelledby="trip-heading">
+            <div class="first-trip__image">
+                <img src="assets/images/shelter-og-baalplads.jpg" width="1400" height="1050" alt="Et shelter og en bålplads omgivet af skov." loading="lazy">
+            </div>
+            <div class="first-trip__content">
+                <div class="section-heading section-heading--light">
+                    <p class="eyebrow">Dit første lille eventyr</p>
+                    <h2 id="trip-heading">Din første tur behøver ikke være vild</h2>
+                </div>
+                <p class="first-trip__description">En kort rute, ét shelter og en nat under åben himmel. Det er nok til at komme i gang med friluftslivet.</p>
+                <a class="btn btn--primary" href="begynderguide.html">Fortsæt til begynderguiden</a>
+            </div>
+            <div class="section-edge section-edge--cta" aria-hidden="true"></div>
+        </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <noscript><p class="container">Aktivér JavaScript for at indlæse fælles navigation og footer.</p></noscript>
 </body>
 </html>

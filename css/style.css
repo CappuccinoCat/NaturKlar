@@ -1,0 +1,1004 @@
+/* Lokale skrifttyper. Licenserne ligger sammen med fontfilerne. */
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("../assets/fonts/bricolage-grotesque-variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("../assets/fonts/atkinson-hyperlegible-regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("../assets/fonts/atkinson-hyperlegible-bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* Værdier fra Hjem, Hjem - mobil og Figma-komponentbiblioteket. */
+:root {
+    --color-beige: #eeeae2;
+    --color-ochre: #d69647;
+    --color-squid-ink: #232f3e;
+    --color-olive: #5e674e;
+    --color-sage: #c4c8ad;
+    --color-stroke: #232f3e33;
+    --color-footer-text: rgb(238 234 226 / 84%);
+    --color-muted: #929598; /* Lidt lysere end Figma for AA-kontrast. */
+    --font-heading: "Bricolage Grotesque", sans-serif;
+    --font-body: "Atkinson Hyperlegible", sans-serif;
+    --weight-regular: 400;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
+    --text-h1: 96px;
+    --text-h2: 48px;
+    --text-h3: 32px;
+    --text-h4: 24px;
+    --text-body: 20px;
+    --text-small: 18px;
+    --text-button: 16px;
+    --text-card-link: 15px;
+    --line-h1: 96px;
+    --line-h2: 52px;
+    --line-h3: 36px;
+    --line-h4: 28px;
+    --line-body: 26px;
+    --line-small: 24px;
+    --line-button: 20px;
+    --tracking-heading: -0.02em;
+    --tracking-eyebrow: 0.015em;
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 80px;
+    --container-max: 1280px;
+    --gutter: 80px;
+    --radius-card: 30px;
+    --radius-button: 30px;
+    --header-height: 120px;
+    --transition-color: 150ms ease;
+}
+
+/* Grundlayout og semantisk typografi. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-beige);
+    color: var(--color-squid-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: var(--line-body);
+}
+
+main {
+    overflow-x: clip;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h1, h2, h3, .brand {
+    font-family: var(--font-heading);
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 14, "wdth" 100;
+    letter-spacing: var(--tracking-heading);
+}
+
+h1 {
+    font-size: var(--text-h1);
+    line-height: var(--line-h1);
+    font-weight: var(--weight-extrabold);
+}
+h2 {
+    font-size: var(--text-h2);
+    line-height: var(--line-h2);
+    font-weight: var(--weight-extrabold);
+}
+h3 {
+    font-size: var(--text-h3);
+    line-height: var(--line-h3);
+    font-weight: var(--weight-bold);
+}
+h4 {
+    font-size: var(--text-h4);
+    line-height: var(--line-h4);
+    font-weight: var(--weight-bold);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+a {
+    color: inherit;
+}
+button {
+    font: inherit;
+}
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+    outline: 3px solid var(--color-squid-ink);
+    outline-offset: 5px;
+}
+.site-footer :focus-visible {
+    outline-color: var(--color-sage);
+}
+[hidden] {
+    display: none;
+}
+
+.container {
+    width: calc(100% - var(--gutter) * 2);
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+.skip-link {
+    position: fixed;
+    z-index: 20;
+    top: 8px;
+    left: 8px;
+    padding: var(--space-sm);
+    background: var(--color-beige);
+    transform: translateY(-150%);
+}
+.skip-link:focus {
+    transform: none;
+}
+.eyebrow {
+    font-size: var(--text-small);
+    line-height: var(--line-small);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-olive);
+}
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.section-heading .eyebrow {
+    padding-left: 3px;
+}
+/* Den lille korrektion udligner forskellen på Figma og browserens fontmål. */
+.section-heading h2 {
+    text-box: trim-both cap alphabetic;
+    padding-bottom: 3.32px;
+}
+.section-heading--light {
+    color: var(--color-beige);
+}
+.section-heading--light .eyebrow {
+    color: var(--color-beige);
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+.mobile-label {
+    display: none;
+}
+
+/* Fælles knapper, links og navigationstilstande. */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 49px;
+    padding: 14px 22px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-button);
+    font-size: var(--text-button);
+    line-height: var(--line-button);
+    font-weight: var(--weight-bold);
+    color: var(--color-squid-ink);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color var(--transition-color), color var(--transition-color);
+}
+.btn--primary {
+    background: var(--color-ochre);
+    border: 0;
+}
+.btn--secondary {
+    border-color: var(--color-squid-ink);
+    padding-block: 13.5px;
+}
+.btn:hover {
+    background: var(--color-sage);
+}
+.btn:active {
+    background: var(--color-olive);
+    color: var(--color-beige);
+}
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: var(--weight-bold);
+    text-underline-offset: 2px;
+}
+.text-link:hover {
+    color: var(--color-olive);
+}
+.text-link:active {
+    color: var(--color-squid-ink);
+}
+
+/* Header og den native, tilgængelige mobildialog. */
+[data-component="header"] {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: var(--header-height);
+}
+.site-header {
+    background: var(--color-beige);
+}
+.site-header__inner {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+.brand {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: var(--weight-extrabold);
+    letter-spacing: -0.32px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.brand__dot {
+    color: var(--color-olive);
+}
+.brand--light {
+    color: var(--color-beige);
+}
+.brand--light .brand__dot {
+    color: var(--color-ochre);
+}
+.site-navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+.site-navigation__link {
+    display: flex;
+    align-items: center;
+    min-height: 39px;
+    font-weight: var(--weight-bold);
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.site-navigation__link:hover {
+    color: var(--color-olive);
+}
+/* Figma bruger lys okker i linktilstande; oliven giver AA-kontrast på beige. */
+.site-navigation__link[aria-current="page"], .site-navigation__link:active {
+    color: var(--color-olive);
+}
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.mobile-menu {
+    padding: 0;
+    border: 0;
+    background: var(--color-beige);
+    color: var(--color-squid-ink);
+}
+.mobile-menu:not([open]) {
+    display: none;
+}
+.mobile-menu::backdrop {
+    background: rgb(0 0 0 / 25%);
+}
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Forsidens hero. Billedet og begge bølgekanter er eksporteret fra Figma. */
+.hero {
+    position: relative;
+    min-height: 702px;
+    overflow: hidden;
+}
+.hero__background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgb(238 234 226 / 82%), rgb(238 234 226 / 82%)), url("../assets/images/hero-shelter.jpg") center / cover;
+}
+.hero__content {
+    position: relative;
+    padding: 91px 0 150px 1px;
+}
+.hero__heading {
+    scroll-margin-top: calc(var(--header-height) + var(--space-md));
+    max-width: 960px;
+    margin-top: var(--space-md);
+    margin-left: -7px;
+}
+.hero__accent {
+    color: var(--color-olive);
+}
+.hero__description {
+    max-width: 528px;
+    margin-top: var(--space-md);
+}
+.hero__actions {
+    display: flex;
+    gap: 25px;
+    margin-top: 34px;
+}
+.hero__actions .btn--secondary {
+    min-width: 164px;
+}
+.section-edge {
+    position: absolute;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+.section-edge--hero {
+    left: 0;
+    right: -5px;
+    height: 109.674px;
+    top: 647px;
+    background-image: url("../assets/icons/hero-kant.svg");
+    background-size: 100% 100%;
+}
+
+/* Introduktion: samme nummererede komponent gentages i alle tre trin. */
+.how-it-works {
+    margin-top: 3px;
+    padding: 77px 0 80px;
+}
+.how-it-works__layout {
+    max-width: 1062px;
+    display: grid;
+    grid-template-columns: 408px minmax(0, 504px);
+    gap: 137px;
+    align-items: start;
+}
+.how-it-works__image {
+    width: 408px;
+    height: 635px;
+    object-fit: cover;
+    border-radius: var(--radius-card);
+}
+.how-it-works__content {
+    padding-top: 4px;
+}
+.how-it-works__content .section-heading {
+    max-width: 471px;
+}
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 79px;
+    padding: 0;
+    margin: 61px 0 0;
+    list-style: none;
+}
+.icon-card {
+    display: flex;
+    gap: var(--space-md);
+    align-items: start;
+}
+.icon-card__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 52.5px;
+    background: var(--color-sage);
+    font-size: 40px;
+}
+.icon-card__content {
+    flex: 1;
+    min-width: 0;
+}
+.icon-card__heading {
+    font-family: var(--font-body);
+    font-size: var(--text-h4);
+    line-height: var(--line-h4);
+    letter-spacing: var(--tracking-eyebrow);
+    margin-bottom: var(--space-xs);
+}
+
+/* Guidekort: ét fælles layout, med billedets beskæring som en lille variant. */
+.guides {
+    padding-top: 26px;
+    padding-bottom: 104px;
+}
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 57px;
+}
+.guide-card {
+    position: relative;
+    min-height: 500px;
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-card);
+}
+.guide-card__image {
+    height: 238px;
+    overflow: hidden;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+.guide-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+}
+.guide-card__image--walking img {
+    object-position: center 134%;
+}
+.guide-card__image--packing img {
+    object-position: center 90%;
+}
+.guide-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 21px;
+    padding: 17px 26px 30px;
+}
+.guide-card__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.guide-card__content > p {
+    max-width: 345px;
+}
+.guide-card__link {
+    font-size: var(--text-card-link);
+    line-height: 18px;
+    min-height: 24px;
+}
+/* Hele kortets klikflade deler linkets destination uden ekstra tabstop. */
+.guide-card__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-card);
+}
+.guide-card:has(.guide-card__link:focus-visible) {
+    outline: 3px solid var(--color-squid-ink);
+    outline-offset: 5px;
+}
+.guide-card__badge {
+    position: absolute;
+    left: 73.28%;
+    top: 220px;
+    width: 60px;
+    height: 60px;
+}
+.guide-card__badge-icon {
+    position: absolute;
+    left: 20px;
+    top: 19px;
+}
+.guides__advice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: var(--space-md);
+}
+
+/* Afsluttende invitation og den originale dekorative SVG-kant. */
+.first-trip {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48.90625% 1fr;
+    background: var(--color-olive);
+    color: var(--color-beige);
+}
+.first-trip__image {
+    min-width: 0;
+}
+.first-trip__image > img {
+    width: 100%;
+    height: 522px;
+    object-fit: cover;
+}
+.first-trip__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 65px 34px;
+    min-width: 0;
+}
+.first-trip__content .section-heading {
+    max-width: 518px;
+}
+.first-trip :focus-visible {
+    outline-color: var(--color-beige);
+}
+.first-trip__description {
+    max-width: 474px;
+    margin: var(--space-lg) 0 37px 3px;
+}
+.section-edge--cta {
+    height: 110px;
+    width: calc(100% + 61px);
+    left: -5px;
+    top: -55px;
+    background-image: url("../assets/icons/cta-kant.svg");
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+}
+
+/* Fælles footer. Rækkefølgen skifter til mobilvariantens layout. */
+.site-footer {
+    background: var(--color-squid-ink);
+    color: var(--color-footer-text);
+}
+.site-footer__inner {
+    min-height: 301px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+}
+.site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.site-footer__copyright {
+    color: var(--color-muted);
+    line-height: 24px;
+}
+.site-footer__groups {
+    display: grid;
+    grid-template-columns: 215px 294px auto;
+    gap: 2px;
+}
+.site-footer__heading {
+    font-family: var(--font-body);
+    font-weight: var(--weight-bold);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-beige);
+    margin-bottom: 25px;
+}
+.site-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-link {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    min-height: 44px;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+}
+a.footer-link:hover {
+    color: var(--color-ochre);
+}
+a.footer-link:active {
+    color: var(--color-ochre);
+}
+
+/* Mellemstørrelser bevarer designets layout og giver teksten plads. */
+@media (min-width: 701px) and (max-width: 1300px) {
+    :root {
+        --gutter: 40px;
+    }
+    .site-navigation {
+        gap: 24px;
+    }
+    .how-it-works__layout {
+        grid-template-columns: minmax(0, 408px) minmax(0, 504px);
+        gap: 60px;
+    }
+    .how-it-works__image {
+        width: 100%;
+    }
+    .guide-card__content {
+        padding-inline: 22px;
+    }
+    .guide-card h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .site-navigation {
+        display: none;
+    }
+    .menu-toggle {
+        display: inline-flex;
+    }
+    .mobile-menu[open] {
+        display: block;
+        position: fixed;
+        inset: 0 0 auto;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100dvh;
+        overflow-y: auto;
+    }
+    .mobile-menu__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 73px 20px 20px 25px;
+    }
+    .mobile-menu__top .brand {
+        font-variation-settings: "opsz" 96, "wdth" 100;
+        letter-spacing: -0.68px;
+    }
+    .mobile-menu__navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        padding: 10px 24px 40px;
+        border-top: 1px solid var(--color-stroke);
+    }
+    .hero__heading {
+        font-size: clamp(64px, 6.67vw, 96px);
+        line-height: 1;
+    }
+    .guide-grid {
+        gap: 24px;
+    }
+    .guide-card {
+        min-height: 530px;
+    }
+    .guide-card__image {
+        height: 210px;
+    }
+    .guide-card__badge {
+        top: 190px;
+    }
+    .guide-card__content {
+        padding-inline: 18px;
+    }
+    .first-trip__content h2 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .site-footer__groups {
+        grid-template-columns: auto auto auto;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+        max-width: 408px;
+        margin-inline: auto;
+    }
+    .guide-card {
+        min-height: 500px;
+    }
+    .guide-card__image {
+        height: 238px;
+    }
+    .guide-card__badge {
+        top: 220px;
+    }
+    .site-footer__inner {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .site-footer__brand {
+        min-height: 140px;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-footer__copyright {
+        font-size: 20px;
+    }
+    .site-footer__groups {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        padding-inline: 24px;
+    }
+    .site-footer__group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-footer__group--external {
+        order: -1;
+    }
+    .site-footer__heading {
+        letter-spacing: 0.015em;
+        margin-bottom: 14px;
+    }
+    .site-footer__links {
+        align-items: center;
+        gap: 14px;
+    }
+    .footer-link {
+        justify-content: center;
+    }
+}
+
+/* Mobil: 402 px-referencen, med fleksible højder ved smallere skærme. */
+@media (max-width: 700px) {
+    :root {
+        --text-h1: 48px;
+        --text-h2: 32px;
+        --text-h3: 24px;
+        --text-body: 17px;
+        --text-small: 14px;
+        --line-h1: 52px;
+        --line-h2: 38px;
+        --line-h3: 30px;
+        --line-small: 20px;
+        --tracking-eyebrow: 0;
+        --gutter: 24px;
+        --header-height: 130px;
+        --radius-card: 26.029px;
+    }
+    .site-header__inner {
+        width: auto;
+        padding: 73px 20px 13px 25px;
+        min-height: var(--header-height);
+    }
+    .site-header .brand {
+        letter-spacing: -0.68px;
+        font-variation-settings: "opsz" 96, "wdth" 100;
+    }
+    .mobile-label {
+        display: inline;
+    }
+    .desktop-label {
+        display: none;
+    }
+    .section-heading {
+        gap: 16px;
+    }
+    .section-heading h2 {
+        padding-bottom: 0;
+    }
+    .hero {
+        min-height: 545px;
+        padding-bottom: 27px;
+    }
+    .hero__background {
+        bottom: 27px;
+        background: linear-gradient(rgb(241 239 235 / 82%), rgb(241 239 235 / 82%)), url("../assets/images/hero-shelter.jpg") center / cover;
+    }
+    .hero__content {
+        width: calc(100% - 40px);
+        padding: 36px 0 40px;
+    }
+    .hero__heading {
+        font-size: var(--text-h1);
+        line-height: var(--line-h1);
+        max-width: 350px;
+        margin: 24px 0 0;
+        text-box: trim-both cap alphabetic;
+    }
+    .hero__description {
+        margin-top: 24px;
+    }
+    .hero__actions {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+    }
+    .hero__actions .btn {
+        width: 100%;
+    }
+    .section-edge--hero {
+        width: 493px;
+        height: 62px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        background-image: url("../assets/icons/hero-kant-mobil.svg");
+    }
+    .how-it-works {
+        margin: 0;
+        padding: 56px 30px 134px;
+    }
+    .how-it-works__layout {
+        width: 100%;
+        display: block;
+    }
+    .how-it-works__image {
+        display: none;
+    }
+    .how-it-works__content {
+        padding: 0;
+    }
+    .steps {
+        gap: 96px;
+        margin-top: 80px;
+    }
+    .icon-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .icon-card__number {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    .icon-card__content {
+        width: 100%;
+        text-align: center;
+    }
+    .icon-card__heading {
+        font-family: var(--font-heading);
+        font-size: var(--text-h3);
+        line-height: var(--line-h3);
+        letter-spacing: var(--tracking-heading);
+        margin-bottom: 16px;
+    }
+    .guides {
+        padding-top: 8px;
+        padding-bottom: 34px;
+    }
+    .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 59px;
+        margin-top: 60px;
+    }
+    .guide-card {
+        min-height: 433.824px;
+    }
+    .guide-card__image {
+        height: 206.5px;
+    }
+    .guide-card__image--walking img {
+        object-position: center 70%;
+    }
+    .guide-card__content {
+        gap: 18.221px;
+        padding: 14.75px 22.56px 36px;
+    }
+    .guide-card__content > p {
+        max-width: 299.338px;
+    }
+    .guide-card__heading {
+        gap: 9.544px;
+    }
+    .guide-card .eyebrow {
+        font-size: 12.147px;
+        line-height: 18px;
+    }
+    .guide-card h3 {
+        font-size: var(--text-h3);
+    }
+    .guide-card__link {
+        font-size: 11.29px;
+        line-height: 13.551px;
+        min-height: 24px;
+        gap: 10.412px;
+    }
+    .guide-card__link .icon {
+        transform: scale(0.867647);
+        transform-origin: left center;
+    }
+    .guide-card__badge {
+        top: 190.882px;
+        transform: scale(0.867647);
+        transform-origin: top left;
+    }
+    .guides__advice {
+        display: block;
+        margin-top: 60px;
+    }
+    .guides__advice .text-link {
+        display: flex;
+        margin-top: 8px;
+        text-decoration: none;
+    }
+    .guides__advice .icon {
+        margin-left: auto;
+    }
+    .first-trip {
+        display: flex;
+        flex-direction: column;
+        background: var(--color-beige);
+    }
+    .first-trip__image {
+        position: relative;
+        width: 100%;
+        height: 316px;
+        overflow: hidden;
+    }
+    .first-trip__image > img {
+        position: absolute;
+        top: 42px;
+        height: 298px;
+    }
+    .first-trip__content {
+        background: var(--color-olive);
+        padding: 48px 24px;
+    }
+    .first-trip__content h2 {
+        font-size: var(--text-h2);
+        line-height: var(--line-h2);
+    }
+    .first-trip__description {
+        margin: 24px 0 32px 3px;
+    }
+    .first-trip__content .btn {
+        width: 100%;
+    }
+    .section-edge--cta {
+        width: 502px;
+        height: 50px;
+        left: -81px;
+        top: 24px;
+        background-image: url("../assets/icons/cta-kant-mobil.svg");
+    }
+}
+
+@media (max-width: 370px) {
+    .hero__heading {
+        font-size: clamp(39px, 12vw, 48px);
+    }
+    .guides__advice .text-link {
+        align-items: start;
+    }
+    .first-trip__content .btn {
+        padding-inline: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+}
