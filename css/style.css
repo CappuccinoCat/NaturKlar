@@ -27,7 +27,7 @@
 :root {
     --color-beige: #eeeae2;
     --color-ochre: #d69647;
-    --color-squid-ink: #232f3e;
+    --color-ink: #232f3e;
     --color-olive: #5e674e;
     --color-sage: #c4c8ad;
     --color-stroke: #232f3e33;
@@ -78,7 +78,7 @@
 body {
     margin: 0;
     background: var(--color-beige);
-    color: var(--color-squid-ink);
+    color: var(--color-ink);
     font-family: var(--font-body);
     font-size: var(--text-body);
     line-height: var(--line-body);
@@ -134,7 +134,7 @@ button, a {
     -webkit-tap-highlight-color: transparent;
 }
 :focus-visible {
-    outline: 3px solid var(--color-squid-ink);
+    outline: 3px solid var(--color-ink);
     outline-offset: 5px;
 }
 .site-footer :focus-visible {
@@ -209,7 +209,7 @@ button, a {
     font-size: var(--text-button);
     line-height: var(--line-button);
     font-weight: var(--weight-bold);
-    color: var(--color-squid-ink);
+    color: var(--color-ink);
     text-decoration: none;
     text-align: center;
     transition: background-color var(--transition-color), color var(--transition-color);
@@ -219,15 +219,21 @@ button, a {
     border: 0;
 }
 .btn--secondary {
-    border-color: var(--color-squid-ink);
+    border-color: var(--color-ink);
     padding-block: 13.5px;
 }
 .btn:hover {
-    background: var(--color-sage);
+    background: var(--color-olive);
+    color: var(--color-beige);
+    border: none;
 }
 .btn:active {
     background: var(--color-olive);
     color: var(--color-beige);
+}
+.btn--on-olive:hover,
+.btn--on-olive:active {
+    background: var(--color-ink);
 }
 .text-link {
     display: inline-flex;
@@ -237,10 +243,10 @@ button, a {
     text-underline-offset: 2px;
 }
 .text-link:hover {
-    color: var(--color-olive);
+    color: var(--color-ochre);
 }
 .text-link:active {
-    color: var(--color-squid-ink);
+    color: var(--color-ink);
 }
 
 /* Header og den native, tilgængelige mobildialog. */
@@ -292,7 +298,7 @@ button, a {
     text-decoration: none;
 }
 .site-navigation__link:hover {
-    color: var(--color-olive);
+    color: var(--color-ochre);
 }
 /* Figma bruger lys okker i linktilstande; oliven giver AA-kontrast på beige. */
 .site-navigation__link[aria-current="page"], .site-navigation__link:active {
@@ -313,7 +319,7 @@ button, a {
     padding: 0;
     border: 0;
     background: var(--color-beige);
-    color: var(--color-squid-ink);
+    color: var(--color-ink);
 }
 .mobile-menu:not([open]) {
     display: none;
@@ -497,7 +503,7 @@ body.menu-open {
     border-radius: var(--radius-card);
 }
 .guide-card:has(.guide-card__link:focus-visible) {
-    outline: 3px solid var(--color-squid-ink);
+    outline: 3px solid var(--color-ink);
     outline-offset: 5px;
 }
 .guide-card__badge {
@@ -566,7 +572,7 @@ body.menu-open {
 
 /* Fælles footer. Rækkefølgen skifter til mobilvariantens layout. */
 .site-footer {
-    background: var(--color-squid-ink);
+    background: var(--color-ink);
     color: var(--color-footer-text);
 }
 .site-footer__inner {
