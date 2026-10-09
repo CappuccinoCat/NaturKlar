@@ -2406,6 +2406,7 @@ a.footer-link:active {
         width: auto;
     }
     .packing-cta .section-edge--cta {
+        width: max(calc(100% + 81px), 502px);
         top: 24px;
     }
 }
