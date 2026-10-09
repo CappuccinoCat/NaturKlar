@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#23313C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title">
+  <title id="title">Træ med sol og snefnug – prøv en ny årstid</title>
+  <circle cx="9.5" cy="12.5" r="3"/>
+  <path d="M9.5 5.5v2M9.5 17.5v2M2.5 12.5h2M14.5 12.5h2M4.6 7.6l1.4 1.4M13 16l1.4 1.4M14.4 7.6 13 9M6 16l-1.4 1.4"/>
+  <path d="M37 7v11M31.5 12.5h11M33 8.5l8 8M41 8.5l-8 8"/>
+  <path d="M24 10 16.5 22h3L13 33h22l-6.5-11h3L24 10Z"/>
+  <path d="M21 33v8h6v-8"/>
+</svg>

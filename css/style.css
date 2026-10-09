@@ -1230,6 +1230,11 @@ a.footer-link:active {
     text-decoration-thickness: from-font;
     text-underline-position: from-font;
 }
+.planning-step .text-link[href^="https://"]:hover {
+    /* Kun tekstfarven dæmpes, så understregningen beholder sin fulde farve. */
+    color: color-mix(in srgb, var(--color-ink) 60%, transparent);
+    text-decoration-color: var(--color-ochre);
+}
 .planning-step--reversed {
     grid-template-columns: minmax(0, 727fr) minmax(0, 438fr);
 }
