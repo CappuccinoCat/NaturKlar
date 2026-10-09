@@ -1401,3 +1401,585 @@ a.footer-link:active {
         transition: none;
     }
 }
+
+/* Begynderguide – genbruger tokens, ikon-/guidekort og næste-trin-komponenten. */
+.page-beginner {
+    --color-sleep-surface: #f6f4f1;
+    /* Den samme AA-tekstvariant som på planlægningssiden. */
+    --color-ochre-text: #6c461f;
+}
+.page-beginner .site-navigation__link[aria-current="page"],
+.page-beginner .site-navigation__link:hover {
+    color: var(--color-ochre-text);
+}
+
+.beginner-hero {
+    position: relative;
+    min-height: 707px;
+}
+.beginner-hero__background {
+    position: absolute;
+    inset: 0 0 39px;
+    background: linear-gradient(rgb(241 239 235 / 82%), rgb(241 239 235 / 82%)),
+        url("../assets/images/vandring-for-begyndere.png") center / cover;
+}
+.beginner-hero__content {
+    position: relative;
+    width: calc(100% - 148px);
+    max-width: 1292px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    padding-top: 168px;
+    padding-bottom: 207px;
+}
+.beginner-hero h1 {
+    max-width: 1117px;
+    scroll-margin-top: calc(var(--header-height) + var(--space-md));
+}
+.beginner-hero__content > p {
+    max-width: 683px;
+}
+.beginner-hero__edge {
+    left: 0;
+    bottom: 0;
+    width: calc(100% + 5px);
+    aspect-ratio: 1445 / 109.674;
+    background: url("../assets/icons/hero-kant.svg") 0 0 / 100% auto no-repeat;
+}
+
+.beginner-benefits {
+    padding-bottom: 69px;
+}
+.beginner-benefits .section-heading h2 {
+    padding-bottom: 0;
+}
+.beginner-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 66px;
+    max-width: 1222px;
+    margin: 50px 0 0;
+    padding: 10px 0;
+    list-style: none;
+}
+/* En variation af det eksisterende ikon-kort; bruges til både fordele og regler. */
+.icon-card--outlined {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--space-md);
+}
+.icon-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid currentColor;
+    border-radius: 52.5px;
+}
+.icon-card--outlined .icon-card__content {
+    padding-left: 5px;
+    width: 100%;
+    text-align: left;
+}
+.icon-card--outlined .icon-card__heading {
+    font-family: var(--font-body);
+    font-size: var(--text-h4);
+    line-height: var(--line-h4);
+    letter-spacing: 0.015em;
+    margin-bottom: var(--space-xs);
+}
+.beginner-benefits .icon-card__content p {
+    color: #000;
+}
+.icon-card--light {
+    color: var(--color-beige);
+}
+
+.sleep-options {
+    background: var(--color-sleep-surface);
+    padding-top: 42px;
+    padding-bottom: 93px;
+}
+.sleep-options > .container {
+    max-width: 1276px;
+}
+.sleep-options__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sleep-options__intro > p {
+    max-width: 474px;
+    margin-left: 3px;
+    color: #000;
+}
+.sleep-options__grid {
+    gap: 81px;
+    margin-top: 68px;
+}
+.sleep-card {
+    min-height: 466px;
+    background: var(--color-sleep-surface);
+    border-radius: 30px;
+}
+.sleep-card--recommended {
+    background: var(--color-ink);
+    color: var(--color-beige);
+}
+.sleep-card__image {
+    height: 233px;
+    border-radius: 30px 30px 0 0;
+}
+/* Beskæringen følger billedfills i Figma. Billedrammen er det eneste klippede område. */
+.sleep-card__image img {
+    object-position: center;
+}
+.sleep-card__image--shelter img {
+    object-position: center 84%;
+}
+.sleep-card__image--tent img {
+    object-position: center 84%;
+}
+.sleep-card__image--hammock img {
+    width: 111.21%;
+    max-width: none;
+    margin-left: -5.6%;
+    object-position: center 85%;
+}
+.sleep-card__content {
+    gap: 23px;
+    padding: 38px 26px 18px;
+}
+.sleep-card__content .guide-card__heading {
+    gap: 14px;
+}
+.sleep-card__badge {
+    left: 75.2%;
+    top: 220px;
+}
+.sleep-card__symbol {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.sleep-card__recommendation {
+    position: absolute;
+    left: 26px;
+    top: 221px;
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: var(--color-ochre);
+    /* Ink erstatter lys tekst på okker for tilstrækkelig kontrast. */
+    color: var(--color-ink);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+}
+.sleep-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 39px;
+}
+.sleep-card__links .text-link {
+    min-height: 24px;
+    gap: 6px;
+    color: rgb(238 234 226 / 70%);
+    font-size: var(--text-card-link);
+    line-height: 18px;
+    text-underline-position: from-font;
+}
+.sleep-card__links .text-link:hover {
+    color: var(--color-beige);
+}
+.sleep-card--recommended :focus-visible {
+    outline-color: var(--color-beige);
+}
+
+.beginner-rules {
+    position: relative;
+    background: var(--color-olive);
+    color: var(--color-beige);
+}
+.beginner-rules__layout {
+    position: relative;
+    left: 9px;
+    display: grid;
+    grid-template-columns: minmax(0, 518fr) minmax(0, 586fr);
+    align-items: center;
+    gap: 80px;
+    max-width: 1184px;
+    min-height: 538px;
+    padding-block: 68px 90px;
+}
+.beginner-rules__intro > p {
+    max-width: 474px;
+    margin: 28px 0 0 3px;
+}
+.beginner-rules__link {
+    gap: 12px;
+    border-color: var(--color-beige);
+    color: var(--color-beige);
+    margin-top: 41px;
+    font-size: var(--text-card-link);
+    line-height: 18px;
+    text-decoration: underline;
+    text-underline-position: from-font;
+}
+.beginner-rules :focus-visible {
+    outline-color: var(--color-beige);
+}
+.beginner-rules__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 49px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.beginner-rules__grid .icon-card {
+    min-height: 170px;
+}
+.beginner-rules__grid .icon-card__content > p {
+    width: 275px;
+}
+.beginner-rules__edge {
+    --wave-height: calc((100vw + 5px) * 109.674 / 1445);
+    left: 0;
+    width: calc(100% + 5px);
+    aspect-ratio: 1445 / 109.674;
+    background-size: 100% auto;
+}
+.beginner-rules__edge--top {
+    top: calc(51.674px - var(--wave-height));
+    transform: rotate(180deg);
+    background-image: url("../assets/icons/regler-kant-top.svg");
+}
+.beginner-rules__edge--bottom {
+    bottom: calc(64px - var(--wave-height));
+    background-image: url("../assets/icons/hero-kant.svg");
+}
+
+.beginner-safety {
+    padding-block: 88px 75px;
+}
+.beginner-safety__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 587fr) minmax(0, 576fr);
+    gap: 69px;
+    align-items: center;
+    max-width: 1232px;
+    margin-left: max(var(--gutter), calc((100% - var(--container-max)) / 2));
+}
+.beginner-safety__image {
+    position: relative;
+    height: 680px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.beginner-safety__image img {
+    position: absolute;
+    width: 114.66%;
+    max-width: none;
+    height: 137.98%;
+    left: -4.6%;
+    top: -35.76%;
+    object-fit: cover;
+}
+.beginner-safety__intro > p {
+    max-width: 474px;
+    margin: 40px 0 0 3px;
+    color: #000;
+}
+.beginner-safety__intro {
+    min-height: 235px;
+}
+.beginner-safety__list {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    padding: 0;
+    margin: 11px 0 0;
+    list-style: none;
+}
+.beginner-safety__list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.beginner-safety__list p {
+    max-width: 494px;
+    min-width: 0;
+}
+.beginner-safety__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-sage);
+}
+.next-step--beginner .next-step__content {
+    padding-left: 108px;
+}
+
+/* Begynderguiden følger projektets eksisterende mellemstørrelser. */
+@media (min-width: 701px) and (max-width: 1300px) {
+    .beginner-hero__content {
+        width: calc(100% - var(--gutter) * 2);
+    }
+    .beginner-hero h1 {
+        font-size: clamp(64px, 6.67vw, 96px);
+        line-height: 1;
+    }
+    .beginner-benefits__grid {
+        gap: 40px;
+    }
+    .sleep-options__grid {
+        gap: 32px;
+    }
+    .beginner-rules__layout,
+    .beginner-safety__layout {
+        gap: 40px;
+    }
+    .beginner-rules__layout {
+        left: 0;
+    }
+    .beginner-rules__grid {
+        gap: 40px 24px;
+    }
+    .beginner-rules__grid .icon-card__content > p {
+        width: auto;
+    }
+    .beginner-safety__layout {
+        margin-inline: auto;
+    }
+    .beginner-rules h2,
+    .beginner-safety h2 {
+        font-size: clamp(32px, 3.34vw, 48px);
+        line-height: 1.083334;
+    }
+    .next-step--beginner .next-step__content {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .beginner-benefits__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 62px 40px;
+    }
+    .sleep-options__grid {
+        gap: 76px;
+    }
+    .sleep-card {
+        max-width: 500px;
+        width: 100%;
+        justify-self: center;
+    }
+    .beginner-rules__layout,
+    .beginner-safety__layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .beginner-rules__layout {
+        padding-block: 80px;
+        gap: 48px;
+    }
+    .beginner-safety__image {
+        height: 300px;
+    }
+    .beginner-safety__image img {
+        position: static;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+    }
+    .beginner-safety__intro {
+        min-height: 0;
+    }
+    .beginner-safety__list {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-beginner .section-heading {
+        gap: 22px;
+    }
+    .beginner-hero {
+        min-height: 470px;
+    }
+    .beginner-hero__background {
+        bottom: 0;
+        background-position: center, 75% center;
+    }
+    .beginner-hero__content {
+        width: calc(100% - 60px);
+        gap: 32px;
+        padding: 46px 0 60px;
+    }
+    .beginner-hero h1 {
+        text-box: trim-both cap alphabetic;
+    }
+    .beginner-hero__content > p {
+        margin-top: 14px;
+    }
+    .beginner-hero__edge {
+        bottom: -21px;
+        width: max(100%, 493px);
+        aspect-ratio: 493 / 62;
+        background-image: url("../assets/icons/hero-kant-mobil.svg");
+    }
+    .beginner-benefits {
+        padding-top: 50px;
+        padding-bottom: 82px;
+    }
+    .beginner-benefits > .container,
+    .sleep-options > .container,
+    .beginner-rules__layout,
+    .beginner-safety__layout {
+        width: calc(100% - 60px);
+    }
+    .beginner-benefits__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 62px;
+        margin-top: 48px;
+    }
+    .icon-card--outlined {
+        align-items: start;
+        gap: var(--space-md);
+    }
+    .icon-card--outlined .icon-card__heading {
+        font-size: 20px;
+        line-height: var(--line-h4);
+    }
+    .sleep-options {
+        padding-top: 78px;
+        padding-bottom: 94px;
+    }
+    .sleep-options__intro {
+        gap: 18px;
+    }
+    .sleep-options__grid {
+        width: calc(100% + 22px);
+        margin-left: -12px;
+        margin-top: 61px;
+    }
+    .sleep-card {
+        min-height: 466px;
+        max-width: none;
+    }
+    .sleep-card__image {
+        height: 233px;
+    }
+    .sleep-card__content {
+        padding: 38px 21px 17px 25px;
+        gap: 56px;
+    }
+    .sleep-card h3 {
+        font-size: var(--text-h3);
+        line-height: var(--line-h3);
+    }
+    .sleep-card__badge {
+        transform: none;
+        width: 58.8679px;
+    }
+    .sleep-card__badge > picture:not(.sleep-card__symbol) > img {
+        width: auto;
+        height: 60px;
+        max-width: none;
+    }
+    .sleep-card__links {
+        gap: 12px 34px;
+    }
+    .sleep-card__links .text-link {
+        font-size: 14px;
+        gap: 6px;
+    }
+    .beginner-rules__layout {
+        left: 0;
+        min-height: 1113px;
+        padding-block: 114px 52px;
+        gap: 16px;
+    }
+    .beginner-rules .eyebrow {
+        color: var(--color-sage);
+    }
+    .beginner-rules__intro > p {
+        margin-top: 40px;
+    }
+    .beginner-rules__link {
+        min-height: 44px;
+        margin-top: 16px;
+        padding: 9px 10px;
+        font-size: 14px;
+    }
+    .beginner-rules__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+    .beginner-rules__grid .icon-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        min-height: 166px;
+    }
+    .beginner-rules__grid .icon-card__heading {
+        font-family: var(--font-heading);
+        font-size: var(--text-h3);
+        line-height: var(--line-h3);
+        letter-spacing: var(--tracking-heading);
+    }
+    .beginner-rules__grid .icon-card__content > p {
+        width: auto;
+    }
+    .beginner-rules__edge {
+        width: max(100%, 502px);
+    }
+    .beginner-rules__edge--top {
+        top: calc(106px - max(148px, 100vw * 148 / 502));
+        aspect-ratio: 502 / 148;
+        transform: none;
+        background-image: url("../assets/icons/regler-kant-top-mobil.svg");
+    }
+    .beginner-rules__edge--bottom {
+        bottom: calc(55px - max(82px, 100vw * 82 / 502));
+        aspect-ratio: 502 / 82;
+        background-image: url("../assets/icons/regler-kant-bund-mobil.svg");
+    }
+    .beginner-safety {
+        padding-block: 60px 11px;
+    }
+    .beginner-safety__layout {
+        gap: 22px;
+        margin-inline: auto;
+    }
+    .beginner-safety__image {
+        height: 220px;
+    }
+    .beginner-safety__intro {
+        padding-bottom: 48px;
+    }
+    .beginner-safety__list {
+        gap: 32px;
+        margin-top: 0;
+    }
+    .beginner-safety__list li {
+        align-items: start;
+        gap: 12px;
+    }
+    .next-step--beginner .next-step__content {
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+    }
+}

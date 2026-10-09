@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Drømmer du om din første nat i naturen? Her får du svar på, hvad friluftsliv er, hvad du får ud af det, hvor du må sove, og hvordan du føler dig tryg.">
+    <title>Begynderguide – NaturKlar</title>
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/atkinson-hyperlegible-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="page-beginner">
+    <a class="skip-link" href="#hero-heading">Spring til indhold</a>
+    <div data-component="header"></div>
+
+    <main id="indhold">
+        <section class="beginner-hero" aria-labelledby="hero-heading">
+            <div class="beginner-hero__background" aria-hidden="true"></div>
+            <div class="container beginner-hero__content">
+                <nav class="eyebrow breadcrumb" aria-label="Brødkrummesti">
+                    <a href="index.html">Hjem</a><span aria-hidden="true"> / </span><span aria-current="page">Trin 1: begynderguide</span>
+                </nav>
+                <!-- display:none skjuler den inaktive tekst også for skærmlæsere. -->
+                <h1 id="hero-heading" tabindex="-1"><span class="desktop-label">Det vigtigste begyndere i friluftsliv skal vide</span><span class="mobile-label">En nat i naturen for begyndere</span></h1>
+                <p>Drømmer du om din første nat i naturen? Her får du svar på, hvad friluftsliv er, hvad du får ud af det, hvor du må sove, og hvordan du føler dig tryg.</p>
+            </div>
+            <div class="section-edge beginner-hero__edge" aria-hidden="true"></div>
+        </section>
+
+        <section class="beginner-benefits" aria-labelledby="benefits-heading">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Hvorfor vælge friluftslivet</p>
+                    <h2 id="benefits-heading">Det får du ud af naturen</h2>
+                </div>
+                <ul class="beginner-benefits__grid">
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Ro i hovedet</h3>
+                            <p>Ingen skærme og ingen notifikationer. Mange oplever, at bare et par timer i naturen giver en tiltrængt pause fra hverdagens tempo.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Mere motion</h3>
+                            <p>Du går, bærer og slår lejr i dit eget tempo. Kroppen bliver brugt, uden at det føles som et fitnesspas.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Tid sammen</h3>
+                            <p>Uden skærme og to-do-lister bliver der plads til de lange samtaler, eller til bare at sidde stille sammen ved bålet.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Det er gratis</h3>
+                            <p>De fleste sheltere og bålpladser koster ingenting, og der ligger sikkert et tættere på dig, end du tror.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="sleep-options" aria-labelledby="sleep-heading">
+            <div class="container">
+                <div class="sleep-options__intro">
+                    <div class="section-heading">
+                        <p class="eyebrow desktop-label">En nat i naturen</p>
+                        <h2 id="sleep-heading">Hvor må du sove?</h2>
+                    </div>
+                    <p><span class="desktop-label">Der er tre overordnede måder at sove ude på uden for campingpladser. Til første tur anbefaler vi et shelter</span><span class="mobile-label">Der er tre overordnede måder at sove i naturen. Til første tur anbefaler vi et shelter</span></p>
+                </div>
+                <div class="guide-grid sleep-options__grid">
+                    <article class="guide-card sleep-card sleep-card--recommended" aria-labelledby="shelter-heading">
+                        <div class="guide-card__image sleep-card__image sleep-card__image--shelter">
+                            <img src="assets/images/shelter-begynderguide.png" width="1600" height="1200" alt="Et åbent træshelter med tag og soveplads i skoven." loading="lazy">
+                        </div>
+                        <span class="sleep-card__recommendation">Anbefalet</span>
+                        <span class="guide-card__badge sleep-card__badge" aria-hidden="true">
+                            <picture><source media="(max-width: 700px)" srcset="assets/icons/kort-cirkel-anbefalet-mobil.svg"><img src="assets/icons/kort-cirkel-anbefalet.svg" width="60" height="60" alt=""></picture>
+                            <picture class="guide-card__badge-icon sleep-card__symbol"><source media="(max-width: 700px)" srcset="assets/icons/shelter-lys.svg"><img src="assets/icons/shelter.svg" width="25" height="17" alt=""></picture>
+                        </span>
+                        <div class="guide-card__content sleep-card__content">
+                            <div class="guide-card__heading">
+                                <h3 id="shelter-heading">Shelter</h3>
+                                <p>Tag over hovedet og intet telt at bære. Nogle kan bookes, andre er først-til-mølle.</p>
+                            </div>
+                            <div class="sleep-card__links">
+                                <a class="text-link" href="https://naturstyrelsen.dk/">Naturstyrelsen<picture><source media="(max-width: 700px)" srcset="assets/icons/eksternt-link-shelter-mobil.svg"><img class="icon" src="assets/icons/eksternt-link-shelter.svg" width="24" height="24" alt=""></picture></a>
+                                <a class="text-link" href="https://udinaturen.dk/">Udinaturen<picture><source media="(max-width: 700px)" srcset="assets/icons/eksternt-link-shelter-mobil.svg"><img class="icon" src="assets/icons/eksternt-link-shelter.svg" width="24" height="24" alt=""></picture></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="guide-card sleep-card" aria-labelledby="tent-heading">
+                        <div class="guide-card__image sleep-card__image sleep-card__image--tent">
+                            <img src="assets/images/telt-i-skoven.png" width="4075" height="2660" alt="Et oplyst telt mellem træerne i en mørk skov." loading="lazy">
+                        </div>
+                        <span class="guide-card__badge sleep-card__badge" aria-hidden="true">
+                            <picture><source media="(max-width: 700px)" srcset="assets/icons/kort-cirkel-mobil.svg"><img src="assets/icons/kort-cirkel.svg" width="60" height="60" alt=""></picture>
+                            <img class="guide-card__badge-icon sleep-card__symbol" src="assets/icons/telt.svg" width="24" height="24" alt="">
+                        </span>
+                        <div class="guide-card__content sleep-card__content">
+                            <div class="guide-card__heading">
+                                <h3 id="tent-heading">Telt</h3>
+                                <p>Mere frihed til at vælge sted. Kun i skove, hvor fri teltning er tilladt.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="guide-card sleep-card" aria-labelledby="hammock-heading">
+                        <div class="guide-card__image sleep-card__image sleep-card__image--hammock">
+                            <img src="assets/images/haengekoeje-i-skoven.png" width="3746" height="1998" alt="En hængekøje spændt op mellem træer ved en sø." loading="lazy">
+                        </div>
+                        <span class="guide-card__badge sleep-card__badge" aria-hidden="true">
+                            <picture><source media="(max-width: 700px)" srcset="assets/icons/kort-cirkel-mobil.svg"><img src="assets/icons/kort-cirkel.svg" width="60" height="60" alt=""></picture>
+                            <img class="guide-card__badge-icon sleep-card__symbol" src="assets/icons/haengekoeje.png" width="26" height="26" alt="">
+                        </span>
+                        <div class="guide-card__content sleep-card__content">
+                            <div class="guide-card__heading">
+                                <h3 id="hammock-heading">Hængekøje</h3>
+                                <p>Let og hyggeligt i tørt vejr. Brug brede stropper, så træerne ikke tager skade.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="beginner-rules" aria-labelledby="rules-heading">
+            <div class="section-edge beginner-rules__edge beginner-rules__edge--top" aria-hidden="true"></div>
+            <div class="container beginner-rules__layout">
+                <div class="beginner-rules__intro">
+                    <div class="section-heading section-heading--light">
+                        <p class="eyebrow mobile-label">Dit første lille eventyr</p>
+                        <h2 id="rules-heading">Regler, du skal kende</h2>
+                    </div>
+                    <p>Det vigtigste kort fortalt. Reglerne kan være forskellige fra sted til sted, så tjek altid den plads, du vælger.</p>
+                    <!-- Figma har ingen URL; destinationen er verificeret hos Naturstyrelsen. -->
+                    <a class="btn btn--secondary btn--on-olive text-link beginner-rules__link" href="https://naturstyrelsen.dk/regler-og-tilladelser">Læs reglerne hos Naturstyrelsen<img class="icon" src="assets/icons/eksternt-link-regler.svg" width="24" height="24" alt=""></a>
+                </div>
+                <ul class="beginner-rules__grid">
+                    <li class="icon-card icon-card--outlined icon-card--light">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/telt-lys.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Fri teltning</h3>
+                            <p>Kun i skove, hvor det er tilladt, og max én nat samme sted.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined icon-card--light">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/baal-lys.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Bål</h3>
+                            <p>Kun på faste bålpladser, når der ikke er afbrændingsforbud.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined icon-card--light">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/affald-lys.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Affald</h3>
+                            <p>Alt, du tager med ud, tager du med hjem.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined icon-card--light">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/pote-lys.svg" width="22" height="20" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Hund</h3>
+                            <p>Skal i snor i skoven. Tjek, om hunde må være på pladsen.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-edge beginner-rules__edge beginner-rules__edge--bottom" aria-hidden="true"></div>
+        </section>
+
+        <section class="beginner-safety" aria-labelledby="safety-heading">
+            <div class="container beginner-safety__layout">
+                <div class="beginner-safety__image">
+                    <img src="assets/images/snobroed-ved-baalet.png" width="1434" height="1920" alt="En familie bager snobrød over et bål." loading="lazy">
+                </div>
+                <div class="beginner-safety__content">
+                    <div class="beginner-safety__intro">
+                        <div class="section-heading">
+                            <p class="eyebrow">Tryghed om natten</p>
+                            <h2 id="safety-heading">Er det trygt at sove ude?</h2>
+                        </div>
+                        <p>Mange er nervøse før første nat. Det er helt normalt. Det her gør det nemmere:</p>
+                    </div>
+                    <ul class="beginner-safety__list">
+                        <li><span class="beginner-safety__check" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span><p>Vælg et shelter tæt på bilen eller offentlig vej, så du altid kan tage hjem.</p></li>
+                        <li><span class="beginner-safety__check" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span><p>Kom frem i dagslys, så du kender pladsen, før det bliver mørkt.</p></li>
+                        <li><span class="beginner-safety__check" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span><p>Hav en lommelygte eller pandelampe og en opladet mobil med.</p></li>
+                        <li><span class="beginner-safety__check" aria-hidden="true"><img src="assets/icons/flueben.svg" width="24" height="24" alt=""></span><p>Fortæl en ven, hvor du sover, også selvom du er sammen med flere på turen.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-step next-step--beginner" aria-labelledby="next-step-heading">
+            <a class="next-step__link" href="planlaeg-tur.html">
+                <div class="container next-step__content">
+                    <h2 id="next-step-heading">Næste trin:<br class="mobile-label"> Planlæg din tur</h2>
+                    <span class="next-step__arrow" aria-hidden="true"></span>
+                </div>
+                <div class="section-edge next-step__edge" aria-hidden="true"></div>
+            </a>
+        </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <noscript><p class="container">Aktivér JavaScript for at indlæse fælles navigation og footer.</p></noscript>
+</body>
+</html>
