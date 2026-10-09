@@ -705,12 +705,46 @@ a.footer-link:active {
         letter-spacing: -0.68px;
     }
     .mobile-menu__navigation {
+        --mobile-menu-inset: 24px;
         display: flex;
         flex-direction: column;
-        align-items: start;
-        gap: 15px;
-        padding: 10px 24px 40px;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px var(--mobile-menu-inset) 40px;
         border-top: 1px solid var(--color-stroke);
+    }
+    .mobile-menu__navigation .site-navigation__link {
+        justify-content: space-between;
+        gap: var(--space-md);
+        min-height: 64px;
+        padding: 16px 12px;
+    }
+    .mobile-menu__navigation .site-navigation__link:not(:last-child) {
+        border-bottom: 1px solid var(--color-stroke);
+    }
+    /* Mobilmenuen bruger en højrepil i stedet for desktopmenuens underline. */
+    .mobile-menu__navigation .site-navigation__link::after {
+        position: static;
+        inset: auto;
+        width: 12px;
+        height: 12px;
+        flex: 0 0 12px;
+        margin-left: auto;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        background: transparent;
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
+    .mobile-menu__navigation .site-navigation__link[aria-current="page"] {
+        /* Baggrunden går til kanten; ekstra padding bevarer tekst og pil. */
+        margin-inline: calc(-1 * var(--mobile-menu-inset));
+        padding-inline: calc(var(--mobile-menu-inset) + 12px);
+        background: var(--color-ochre);
+        color: var(--color-ink);
+    }
+    .mobile-menu__navigation .site-navigation__link:focus-visible {
+        outline-offset: -3px;
     }
     .hero__heading {
         font-size: clamp(64px, 6.67vw, 96px);
@@ -753,7 +787,7 @@ a.footer-link:active {
         letter-spacing: -0.32px;
     }
     .mobile-menu__navigation {
-        padding-inline: var(--gutter);
+        --mobile-menu-inset: var(--gutter);
     }
 }
 
@@ -1078,6 +1112,10 @@ a.footer-link:active {
         left: -81px;
         top: 24px;
         background-image: url("../assets/icons/cta-kant-mobil.svg");
+    }
+    .first-trip:not(.packing-cta) > .section-edge--cta {
+        width: 100%;
+        left: 0;
     }
 }
 
