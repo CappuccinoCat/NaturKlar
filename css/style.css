@@ -187,6 +187,7 @@ button, a {
 }
 .section-heading--light .eyebrow {
     color: var(--color-beige);
+    opacity: 70%;
 }
 .icon {
     width: 24px;
@@ -242,11 +243,9 @@ button, a {
     font-weight: var(--weight-bold);
     text-underline-offset: 2px;
 }
-.text-link:hover {
-    color: var(--color-ochre);
-}
+.text-link:hover,
 .text-link:active {
-    color: var(--color-ink);
+    text-decoration-color: var(--color-ochre);
 }
 
 /* Header og den native, tilgængelige mobildialog. */
@@ -292,6 +291,7 @@ button, a {
     gap: 36px;
 }
 .site-navigation__link {
+    position: relative;
     display: flex;
     align-items: center;
     min-height: 39px;
@@ -301,10 +301,21 @@ button, a {
     color: var(--color-ink);
     text-decoration: none;
 }
-.site-navigation__link:hover,
-.site-navigation__link[aria-current="page"],
-.site-navigation__link:active {
-    color: var(--color-ochre);
+.site-navigation__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 3px;
+    background: var(--color-ochre);
+    opacity: 0;
+    pointer-events: none;
+}
+.site-navigation__link:hover::after,
+.site-navigation__link[aria-current="page"]::after,
+.site-navigation__link:active::after {
+    opacity: 1;
 }
 .menu-toggle {
     display: none;
@@ -350,6 +361,7 @@ body.menu-open {
 }
 .hero .eyebrow {
     color: var(--color-ink);
+    opacity: 70%;
 }
 .hero__heading {
     scroll-margin-top: calc(var(--header-height) + var(--space-md));
@@ -628,11 +640,12 @@ body.menu-open {
     line-height: 24px;
     text-decoration: none;
 }
-a.footer-link:hover {
-    color: var(--color-ochre);
-}
+a.footer-link:hover,
 a.footer-link:active {
-    color: var(--color-ochre);
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-ochre);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
 }
 
 /* Mellemstørrelser bevarer designets layout og giver teksten plads. */
@@ -1176,9 +1189,6 @@ a.footer-link:active {
     text-decoration-thickness: from-font;
     text-underline-position: from-font;
 }
-.planning-step .text-link:hover {
-    color: var(--color-ochre);
-}
 .planning-step--reversed {
     grid-template-columns: minmax(0, 727fr) minmax(0, 438fr);
 }
@@ -1593,8 +1603,7 @@ a.footer-link:active {
     line-height: 18px;
     text-underline-position: from-font;
 }
-.sleep-card__links .text-link:hover,
-.sleep-card__links .text-link:active {
+.sleep-card--recommended .sleep-card__links .text-link:hover {
     color: var(--color-beige);
 }
 .sleep-card--recommended :focus-visible {
@@ -1641,7 +1650,6 @@ a.footer-link:active {
     margin-top: 41px;
     font-size: var(--text-card-link);
     line-height: 18px;
-    text-decoration: underline;
     text-underline-position: from-font;
 }
 .beginner-rules :focus-visible {
