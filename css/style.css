@@ -1665,6 +1665,7 @@ a.footer-link:active {
 }
 
 .beginner-rules {
+    margin-top: 30px;
     position: relative;
     background: var(--color-olive);
     color: var(--color-beige);
@@ -2938,6 +2939,14 @@ a.footer-link:active {
 
 /* Fælles mobillayout for trin, fordele, regler og næste skridt. Farverne bevares. */
 @media (max-width: 701px) {
+    .sleep-options {
+        padding-bottom: var(--space-lg);
+    }
+    .beginner-rules__layout {
+        min-height: 0;
+        padding-top: var(--space-xl);
+        gap: 32px;
+    }
     :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
