@@ -2749,6 +2749,12 @@ a.footer-link:active {
         max-width: none;
     }
 }
+@media (max-width: 701px) {
+    .page-advice .advice-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+}
 @media (max-width: 700px) {
     .page-advice .advice-hero {
         min-height: 422px;
@@ -2780,17 +2786,9 @@ a.footer-link:active {
     .page-advice :is(.advice-grid, .advice-faq__layout, .advice-next-steps > .container) {
         width: calc(100% - 60px);
     }
-    .page-advice .advice-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 40px;
-    }
     .page-advice .advice-card {
         min-height: 0;
         padding: 29px;
-    }
-    .page-advice .advice-card:nth-child(3),
-    .page-advice .advice-card:nth-child(5) {
-        margin-top: 24px;
     }
     .page-advice .advice-card .icon-card__number {
         flex-basis: 60px;
