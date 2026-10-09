@@ -2754,6 +2754,16 @@ a.footer-link:active {
         grid-template-columns: minmax(0, 1fr);
         gap: 40px;
     }
+    .page-advice .advice-next-steps__edge {
+        width: 100%;
+        height: 55.3871px;
+        left: 0;
+        top: -5.3871px;
+        background-image: url("../assets/icons/naeste-skridt-kant-mobil.svg");
+        /* Beskær SVG'ens skrå afslutninger uden at udvide selve elementet. */
+        background-size: calc(100% + 12px) 100%;
+        background-position: center;
+    }
 }
 @media (max-width: 700px) {
     .page-advice .advice-hero {
@@ -2833,13 +2843,6 @@ a.footer-link:active {
     }
     .page-advice .advice-next-steps {
         padding: 81px 0 80px;
-    }
-    .page-advice .advice-next-steps__edge {
-        width: max(100%, 502px);
-        height: 55.3871px;
-        left: 0;
-        top: -5.3871px;
-        background-image: url("../assets/icons/naeste-skridt-kant-mobil.svg");
     }
     .page-advice .advice-next-steps .section-heading {
         gap: 22px;
