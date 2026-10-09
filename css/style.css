@@ -2550,12 +2550,13 @@ a.footer-link:active {
     color: var(--color-olive);
 }
 .page-advice .advice-hero {
-    min-height: 560px;
+    /* Samme mål og indre afstande som pakkelistens hero. */
+    min-height: 691px;
     padding: 0;
     overflow: visible;
 }
 .page-advice .advice-hero .hero__background {
-    inset: 0;
+    inset: 0 0 49px;
     background: linear-gradient(rgb(241 239 235 / 82%), rgb(241 239 235 / 82%)),
         url("../assets/images/baal-gode-raad.jpg") center / cover;
 }
@@ -2563,16 +2564,16 @@ a.footer-link:active {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 41px;
-    padding: 112px 0 110px;
+    gap: 25px;
+    padding: 158px 0 120px;
 }
 .page-advice .advice-hero .hero__heading {
-    max-width: 1188px;
+    max-width: 1046px;
     margin: 0;
-    text-box: trim-both cap alphabetic;
+    text-box: normal;
 }
 .page-advice .advice-hero .hero__description {
-    max-width: 554px;
+    max-width: 553.494px;
     margin: 0;
 }
 .page-advice .advice-hero .breadcrumb {
@@ -2580,7 +2581,7 @@ a.footer-link:active {
 }
 .page-advice .advice-hero__edge {
     left: 0;
-    top: calc(100% - 68px);
+    bottom: 0;
     width: calc(100% + 5px);
     height: 109.674px;
     background: url("../assets/icons/hero-kant.svg") 0 0 / 100% 100% no-repeat;
@@ -2720,7 +2721,7 @@ a.footer-link:active {
 /* Samme mellemstørrelser som på de eksisterende sider. */
 @media (min-width: 701px) and (max-width: 1300px) {
     .page-advice .advice-hero .hero__heading {
-        font-size: clamp(56px, 6.67vw, 96px);
+        font-size: clamp(64px, 6.67vw, 96px);
         line-height: 1;
     }
     .page-advice .advice-grid {
@@ -2754,9 +2755,10 @@ a.footer-link:active {
 }
 @media (max-width: 700px) {
     .page-advice .advice-hero {
-        min-height: 366px;
+        min-height: 422px;
     }
     .page-advice .advice-hero .hero__background {
+        bottom: 0;
         background-size: auto, 100% auto;
         background-position: center, center 41.11%;
     }
@@ -2764,15 +2766,16 @@ a.footer-link:active {
         width: calc(100% - 48px);
         margin-left: 30px;
         gap: var(--space-md);
-        padding: 46px 0 57px;
+        padding: 46px 0 67px;
     }
     .page-advice .advice-hero .hero__heading {
         max-width: none;
+        text-box: trim-both cap alphabetic;
     }
     .page-advice .advice-hero__edge {
         width: max(100%, 493px);
         height: 62px;
-        top: calc(100% - 25px);
+        bottom: -24px;
         background-image: url("../assets/icons/hero-kant-mobil.svg");
     }
     .page-advice .advice-mistakes {
