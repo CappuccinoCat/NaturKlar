@@ -349,6 +349,9 @@ body.menu-open {
     position: relative;
     padding: 91px 0 150px 1px;
 }
+.hero .eyebrow {
+    color: var(--color-ink);
+}
 .hero__heading {
     scroll-margin-top: calc(var(--header-height) + var(--space-md));
     max-width: 960px;
