@@ -1667,18 +1667,20 @@ a.footer-link:active {
 }
 .beginner-rules__edge {
     --wave-height: calc((100vw + 5px) * 109.674 / 1445);
+    /* SVG'ens gennemsigtige yderkant skal altid overlappe nabosektionen. */
+    --wave-overlap: calc(var(--wave-height) * -0.1);
     left: 0;
     width: calc(100% + 5px);
     aspect-ratio: 1445 / 109.674;
     background-size: 100% auto;
 }
 .beginner-rules__edge--top {
-    top: calc(51.674px - var(--wave-height));
+    top: min(var(--wave-overlap), calc(51.674px - var(--wave-height)));
     transform: rotate(180deg);
     background-image: url("../assets/icons/regler-kant-top.svg");
 }
 .beginner-rules__edge--bottom {
-    bottom: calc(64px - var(--wave-height));
+    bottom: min(var(--wave-overlap), calc(64px - var(--wave-height)));
     background-image: url("../assets/icons/hero-kant.svg");
 }
 
