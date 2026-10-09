@@ -75,7 +75,6 @@
                         <section class="checklist__category" aria-labelledby="sleep-heading">
                             <h3 id="sleep-heading">Søvn</h3>
                             <ul class="checklist">
-                                <li><label class="checklist__item" for="rygsaek"><input id="rygsaek" type="checkbox"><span>Rygsæk</span></label></li>
                                 <li><label class="checklist__item" for="sovepose"><input id="sovepose" type="checkbox"><span>Sovepose</span></label></li>
                                 <li><label class="checklist__item" for="liggeunderlag"><input id="liggeunderlag" type="checkbox"><span>Liggeunderlag</span></label></li>
                             </ul>
@@ -83,37 +82,39 @@
                     </div>
                 </section>
 
-                <section class="packing-list__group packing-list__group--optional" aria-labelledby="optional-heading">
-                    <h2 id="optional-heading">Godt at have med<br> men ikke nødvendigt</h2>
-                    <ul class="checklist">
-                        <li><label class="checklist__item" for="siddeunderlag"><input id="siddeunderlag" type="checkbox"><span>Siddeunderlag</span></label></li>
-                        <li><label class="checklist__item" for="termokande"><input id="termokande" type="checkbox"><span>Termokande til kaffe</span></label></li>
-                        <li><label class="checklist__item" for="taendstikker"><input id="taendstikker" type="checkbox"><span>Tændstikker/tændstål</span></label></li>
-                        <li><label class="checklist__item" for="bestik"><input id="bestik" type="checkbox"><span>Krus, tallerken og bestik</span></label></li>
-                        <li><label class="checklist__item" for="kniv"><input id="kniv" type="checkbox"><span>Skarp kniv</span></label></li>
-                        <li><label class="checklist__item" for="hovedpude"><input id="hovedpude" type="checkbox"><span>Lille hovedpude</span></label></li>
-                    </ul>
-                </section>
-            </div>
+                <div class="packing-list__secondary">
+                    <section class="packing-list__group packing-list__group--optional" aria-labelledby="optional-heading">
+                        <h2 id="optional-heading">Godt at have med<br> men ikke nødvendigt</h2>
+                        <ul class="checklist">
+                            <li><label class="checklist__item" for="siddeunderlag"><input id="siddeunderlag" type="checkbox"><span>Siddeunderlag</span></label></li>
+                            <li><label class="checklist__item" for="termokande"><input id="termokande" type="checkbox"><span>Termokande til kaffe</span></label></li>
+                            <li><label class="checklist__item" for="taendstikker"><input id="taendstikker" type="checkbox"><span>Tændstikker/tændstål</span></label></li>
+                            <li><label class="checklist__item" for="bestik"><input id="bestik" type="checkbox"><span>Krus, tallerken og bestik</span></label></li>
+                            <li><label class="checklist__item" for="kniv"><input id="kniv" type="checkbox"><span>Skarp kniv</span></label></li>
+                            <li><label class="checklist__item" for="hovedpude"><input id="hovedpude" type="checkbox"><span>Lille hovedpude</span></label></li>
+                        </ul>
+                    </section>
 
-            <!-- Summary er kun togglen; børnenes afkrydsninger ligger udenfor. -->
-            <details class="packing-accordion">
-                <summary class="packing-accordion__trigger">
-                    <h2>Skal der børn med?</h2>
-                    <span class="packing-accordion__icon" aria-hidden="true">
-                        <img class="packing-accordion__plus" src="assets/icons/accordion-plus.svg" width="54" height="54" alt="">
-                        <img class="packing-accordion__minus" src="assets/icons/accordion-minus.svg" width="54" height="24" alt="">
-                    </span>
-                </summary>
-                <ul class="checklist packing-accordion__panel">
-                    <li><label class="checklist__item" for="barn-varmt-toej"><input id="barn-varmt-toej" type="checkbox"><span>Ekstra varmt lag tøj pr. barn</span></label></li>
-                    <li><label class="checklist__item" for="barn-sovepose"><input id="barn-sovepose" type="checkbox"><span>Sovepose til børn</span></label></li>
-                    <li><label class="checklist__item" for="barn-hue"><input id="barn-hue" type="checkbox"><span>Hue og vanter</span></label></li>
-                    <li><label class="checklist__item" for="barn-snacks"><input id="barn-snacks" type="checkbox"><span>Ekstra snacks og noget varmt at drikke</span></label></li>
-                    <li><label class="checklist__item" for="barn-sovedyr"><input id="barn-sovedyr" type="checkbox"><span>Evt. sovedyr eller andet velkendt</span></label></li>
-                    <li><label class="checklist__item" for="barn-lygte"><input id="barn-lygte" type="checkbox"><span>Barnets egen pandelampe eller lommelygte</span></label></li>
-                </ul>
-            </details>
+                    <!-- Summary er kun togglen; børnenes afkrydsninger ligger udenfor. -->
+                    <details class="packing-accordion">
+                        <summary class="packing-accordion__trigger">
+                            <h2>Skal der børn med?</h2>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/accordion-plus.svg" width="54" height="54" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/accordion-minus.svg" width="54" height="24" alt="">
+                            </span>
+                        </summary>
+                        <ul class="checklist packing-accordion__panel">
+                            <li><label class="checklist__item" for="barn-varmt-toej"><input id="barn-varmt-toej" type="checkbox"><span>Ekstra varmt lag tøj pr. barn</span></label></li>
+                            <li><label class="checklist__item" for="barn-sovepose"><input id="barn-sovepose" type="checkbox"><span>Sovepose til børn</span></label></li>
+                            <li><label class="checklist__item" for="barn-hue"><input id="barn-hue" type="checkbox"><span>Hue og vanter</span></label></li>
+                            <li><label class="checklist__item" for="barn-snacks"><input id="barn-snacks" type="checkbox"><span>Ekstra snacks og noget varmt at drikke</span></label></li>
+                            <li><label class="checklist__item" for="barn-sovedyr"><input id="barn-sovedyr" type="checkbox"><span>Evt. sovedyr eller andet velkendt</span></label></li>
+                            <li><label class="checklist__item" for="barn-lygte"><input id="barn-lygte" type="checkbox"><span>Barnets egen pandelampe eller lommelygte</span></label></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
         </div>
 
         <section class="first-trip packing-cta" aria-labelledby="packing-cta-heading">
