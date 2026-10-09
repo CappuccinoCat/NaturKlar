@@ -278,7 +278,7 @@ button, a {
     white-space: nowrap;
 }
 .brand__dot {
-    color: var(--color-olive);
+    color: var(--color-ochre);
 }
 .brand--light {
     color: var(--color-beige);
@@ -295,17 +295,16 @@ button, a {
     display: flex;
     align-items: center;
     min-height: 39px;
-    font-weight: var(--weight-bold);
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    color: var(--color-ink);
     text-decoration: none;
 }
-.site-navigation__link:hover {
+.site-navigation__link:hover,
+.site-navigation__link[aria-current="page"],
+.site-navigation__link:active {
     color: var(--color-ochre);
-}
-/
-.site-navigation__link[aria-current="page"], .site-navigation__link:active {
-    color: var(--color-olive);
 }
 .menu-toggle {
     display: none;
@@ -1085,10 +1084,6 @@ a.footer-link:active {
 }
 
 
-.page-planning .site-navigation__link[aria-current="page"] {
-    color: var(--color-ochre);
-}
-
 .planning-hero {
     position: relative;
     min-height: 691px;
@@ -1116,13 +1111,17 @@ a.footer-link:active {
     scroll-margin-top: calc(var(--header-height) + var(--space-md));
 }
 .breadcrumb {
-    color: var(--color-olive);
+    color: var(--color-ink);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
 }
 .breadcrumb a,
 .breadcrumb > span[aria-hidden] {
     color: var(--color-ink);
 }
 .breadcrumb a {
+    opacity: 0.6;
     text-decoration: none;
 }
 .breadcrumb a:hover {
@@ -1177,8 +1176,7 @@ a.footer-link:active {
     text-decoration-thickness: from-font;
     text-underline-position: from-font;
 }
-.planning-step .text-link:hover,
-.page-planning .site-navigation__link:hover {
+.planning-step .text-link:hover {
     color: var(--color-ochre);
 }
 .planning-step--reversed {
@@ -1403,11 +1401,6 @@ a.footer-link:active {
     --color-sleep-surface: #f6f4f1;
 
 }
-.page-beginner .site-navigation__link[aria-current="page"],
-.page-beginner .site-navigation__link:hover {
-    color: var(--color-ochre);
-}
-
 .beginner-hero {
     position: relative;
     min-height: 707px;
@@ -2023,9 +2016,6 @@ a.footer-link:active {
     --color-checklist: #28374a;
     --color-children-surface: #d4d7c6;
 }
-.page-packing .site-navigation__link[aria-current="page"] {
-    color: var(--color-ochre);
-}
 .packing-hero {
     position: relative;
     min-height: 691px;
@@ -2546,8 +2536,9 @@ a.footer-link:active {
     --color-faq-surface: #f1efeb;
 
 }
-.page-advice .site-navigation__link[aria-current="page"] {
-    color: var(--color-olive);
+.page-advice .section-heading .eyebrow {
+    color: var(--color-ink);
+    opacity: 0.6;
 }
 .page-advice .advice-hero {
     /* Samme mål og indre afstande som pakkelistens hero. */
@@ -2575,9 +2566,6 @@ a.footer-link:active {
 .page-advice .advice-hero .hero__description {
     max-width: 553.494px;
     margin: 0;
-}
-.page-advice .advice-hero .breadcrumb {
-    color: var(--color-ochre);
 }
 .page-advice .advice-hero__edge {
     left: 0;
