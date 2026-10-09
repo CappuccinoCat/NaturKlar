@@ -59,7 +59,7 @@
     --space-sm: 12px;
     --space-md: 24px;
     --space-lg: 40px;
-    --space-xl: 80px;
+    --space-xl: 60px;
     --container-max: 1280px;
     --gutter: 80px;
     --radius-card: 30px;
@@ -933,7 +933,7 @@ a.footer-link:active {
     }
     .how-it-works {
         margin: 0;
-        padding: 36px 30px 134px;
+        padding: 36px 30px 80px;
     }
     .how-it-works__layout {
         width: 100%;
@@ -956,7 +956,7 @@ a.footer-link:active {
     }
     .steps {
         gap: 96px;
-        margin-top: 80px;
+        margin-top: 50px;
     }
     .icon-card {
         flex-direction: column;
@@ -987,7 +987,7 @@ a.footer-link:active {
     .guide-grid {
         grid-template-columns: 1fr;
         gap: 59px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
     .guide-card {
         min-height: 433.824px;
