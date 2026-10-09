@@ -353,7 +353,7 @@ body.menu-open {
 .hero__background {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgb(238 234 226 / 82%), rgb(238 234 226 / 82%)), url("../assets/images/hero-shelter.jpg") center / cover;
+    background: linear-gradient(rgb(238 234 226 / 89%), rgb(238 234 226 / 82%)), url("../assets/images/hero-shelter.jpg") center / cover;
 }
 .hero__content {
     position: relative;
@@ -1572,6 +1572,7 @@ a.footer-link:active {
 .sleep-card--recommended {
     background: var(--color-ink);
     color: var(--color-beige);
+    text-decoration: none;
 }
 .sleep-card__image {
     height: 233px;
@@ -1631,31 +1632,15 @@ a.footer-link:active {
     letter-spacing: 0.015em;
     text-transform: uppercase;
 }
-.sleep-card__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 39px;
-}
-.sleep-card__links .text-link {
-    min-height: 24px;
-    gap: 6px;
-    color: rgb(238 234 226 / 70%);
-    font-size: var(--text-card-link);
-    line-height: 18px;
-    text-underline-position: from-font;
-}
-.sleep-card--recommended .sleep-card__links .text-link:hover {
-    color: var(--color-beige);
-}
-.sleep-card--recommended :focus-visible {
+.sleep-card--recommended:focus-visible {
     outline-color: var(--color-ink);
 }
 
 /* Den originale SVG bruges som maske, så link og ikon har samme farve i alle tilstande. */
-.page-beginner :is(.sleep-card__links .text-link, .beginner-rules__link, .site-footer__group--external .footer-link) > :is(picture, .icon) {
+.page-beginner :is(.beginner-rules__link, .site-footer__group--external .footer-link) > :is(picture, .icon) {
     display: none;
 }
-.page-beginner :is(.sleep-card__links .text-link, .beginner-rules__link, .site-footer__group--external .footer-link)::after {
+.page-beginner :is(.beginner-rules__link, .site-footer__group--external .footer-link)::after {
     content: "";
     width: 24px;
     height: 24px;
@@ -1950,7 +1935,7 @@ a.footer-link:active {
     .sleep-options__grid {
         width: calc(100% + 22px);
         margin-left: -12px;
-        margin-top: 61px;
+        margin-top: 20px;
     }
     .sleep-card {
         max-width: none;
@@ -1974,13 +1959,6 @@ a.footer-link:active {
         width: auto;
         height: 60px;
         max-width: none;
-    }
-    .sleep-card__links {
-        gap: 12px 34px;
-    }
-    .sleep-card__links .text-link {
-        font-size: 14px;
-        gap: 6px;
     }
     .beginner-rules__layout {
         left: 0;
@@ -2021,12 +1999,6 @@ a.footer-link:active {
     }
     .beginner-rules__edge {
         width: max(100%, 502px);
-    }
-    .beginner-rules__edge--top {
-        top: calc(106px - max(148px, 100vw * 148 / 502));
-        aspect-ratio: 502 / 148;
-        transform: none;
-        background-image: url("../assets/icons/regler-kant-top-mobil.svg");
     }
     .beginner-rules__edge--bottom {
         bottom: calc(55px - max(82px, 100vw * 82 / 502));
@@ -2946,6 +2918,14 @@ a.footer-link:active {
         min-height: 0;
         padding-top: var(--space-xl);
         gap: 32px;
+    }
+    .beginner-rules__edge--top {
+        width: max(100%, 502px);
+        /* SVG-konturen starter ved y=40.5337; hele formen skal ligge over grønt. */
+        top: calc(max(502px, 100vw) * -40.5337 / 502);
+        aspect-ratio: 502 / 148;
+        transform: none;
+        background-image: url("../assets/icons/regler-kant-top-mobil.svg");
     }
     :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) {
         display: grid;
