@@ -2856,3 +2856,47 @@ a.footer-link:active {
         max-width: none;
     }
 }
+
+/* Fælles mobillayout for trin, fordele, regler og næste skridt. Farverne bevares. */
+@media (max-width: 701px) {
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: var(--space-xl);
+    }
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) .icon-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+        min-height: 0;
+        text-align: left;
+    }
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) :is(.icon-card__number, .icon-card__icon) {
+        width: 45px;
+        height: 45px;
+        flex: 0 0 45px;
+        border-radius: 50%;
+        font-size: 24px;
+    }
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) .icon-card__content {
+        width: auto;
+        max-width: none;
+        padding: 0;
+        text-align: left;
+    }
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) .icon-card__heading {
+        font-family: var(--font-heading);
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: var(--weight-bold);
+        letter-spacing: var(--tracking-heading);
+        margin-bottom: var(--space-xs);
+    }
+    :is(.how-it-works .steps, .beginner-benefits__grid, .beginner-rules__grid, .page-advice .advice-next-steps__grid) .icon-card__content > p {
+        width: auto;
+        font-family: var(--font-body);
+        font-size: 17px;
+        line-height: var(--line-body);
+        font-weight: var(--weight-regular);
+    }
+}
