@@ -1084,13 +1084,9 @@ a.footer-link:active {
     }
 }
 
-/* Planlæg din første tur – sidespecifikke komponenter og responsive varianter. */
-.page-planning {
-    /* Figma-okker har 2,11:1 mod beige. Denne tekstvariant opfylder AA. */
-    --color-ochre-text: #6c461f;
-}
+
 .page-planning .site-navigation__link[aria-current="page"] {
-    color: var(--color-ochre-text);
+    color: var(--color-ochre);
 }
 
 .planning-hero {
@@ -1120,7 +1116,7 @@ a.footer-link:active {
     scroll-margin-top: calc(var(--header-height) + var(--space-md));
 }
 .breadcrumb {
-    color: var(--color-ochre-text);
+    color: var(--color-olive);
 }
 .breadcrumb a,
 .breadcrumb > span[aria-hidden] {
@@ -1183,7 +1179,7 @@ a.footer-link:active {
 }
 .planning-step .text-link:hover,
 .page-planning .site-navigation__link:hover {
-    color: var(--color-ochre-text);
+    color: var(--color-ochre);
 }
 .planning-step--reversed {
     grid-template-columns: minmax(0, 727fr) minmax(0, 438fr);
@@ -1405,12 +1401,11 @@ a.footer-link:active {
 /* Begynderguide – genbruger tokens, ikon-/guidekort og næste-trin-komponenten. */
 .page-beginner {
     --color-sleep-surface: #f6f4f1;
-    /* Den samme AA-tekstvariant som på planlægningssiden. */
-    --color-ochre-text: #6c461f;
+
 }
 .page-beginner .site-navigation__link[aria-current="page"],
 .page-beginner .site-navigation__link:hover {
-    color: var(--color-ochre-text);
+    color: var(--color-ochre);
 }
 
 .beginner-hero {
@@ -2024,12 +2019,12 @@ a.footer-link:active {
 
 /* Pakkeliste – nye komponenter og små variationer af den fælles CTA. */
 .page-packing {
-    --color-ochre-text: #6c461f; /* Samme læsbare tekstvariant som de andre undersider. */
+
     --color-checklist: #28374a;
     --color-children-surface: #d4d7c6;
 }
 .page-packing .site-navigation__link[aria-current="page"] {
-    color: var(--color-olive);
+    color: var(--color-ochre);
 }
 .packing-hero {
     position: relative;
@@ -2110,7 +2105,7 @@ a.footer-link:active {
 }
 .packing-list__action:hover,
 .packing-list__action:active {
-    color: var(--color-ochre-text);
+    color: var(--color-ochre);
 }
 .packing-list__columns {
     display: grid;
@@ -2549,7 +2544,7 @@ a.footer-link:active {
 /* Gode råd – kun denne side udvider hero, ikon-kort og native accordion. */
 .page-advice {
     --color-faq-surface: #f1efeb;
-    --color-ochre-text: #6c461f; /* Samme AA-tekstfarve som de øvrige undersider. */
+
 }
 .page-advice .site-navigation__link[aria-current="page"] {
     color: var(--color-olive);
@@ -2581,7 +2576,7 @@ a.footer-link:active {
     margin: 0;
 }
 .page-advice .advice-hero .breadcrumb {
-    color: var(--color-ochre-text);
+    color: var(--color-ochre);
 }
 .page-advice .advice-hero__edge {
     left: 0;
