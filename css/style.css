@@ -1306,8 +1306,8 @@ a.footer-link:active {
         background-size: cover;
     }
     .planning-hero__content {
-        width: calc(100% - 40px);
-        margin-left: 30px;
+        width: calc(100% - 60px);
+        margin: 0 30px;
         gap: 37px;
         padding-top: 46px;
         padding-bottom: 60px;
