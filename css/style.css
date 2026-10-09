@@ -774,6 +774,43 @@ a.footer-link:active {
     }
 }
 
+/* Tablet: introduktionen stables som på mobil, og guidekort fylder containeren. */
+@media (min-width: 701px) and (max-width: 1000px) {
+    .how-it-works__layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    .how-it-works__image {
+        width: 100%;
+        height: 262px;
+    }
+    .how-it-works__content {
+        display: contents;
+    }
+    .how-it-works__content .section-heading {
+        order: -1;
+        margin-bottom: 32px;
+    }
+    .how-it-works .steps {
+        gap: 96px;
+        margin-top: 80px;
+    }
+    .how-it-works .icon-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .how-it-works .icon-card__content {
+        width: 100%;
+        text-align: center;
+    }
+    .guide-grid {
+        max-width: none;
+    }
+}
+
 /* Mobil: 402 px-referencen, med fleksible højder ved smallere skærme. */
 @media (max-width: 700px) {
     :root {
@@ -852,17 +889,26 @@ a.footer-link:active {
     }
     .how-it-works {
         margin: 0;
-        padding: 56px 30px 134px;
+        padding: 36px 30px 134px;
     }
     .how-it-works__layout {
         width: 100%;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
     }
     .how-it-works__image {
-        display: none;
+        display: block;
+        width: 100%;
+        height: 262px;
     }
     .how-it-works__content {
-        padding: 0;
+        display: contents;
+    }
+    .how-it-works__content .section-heading {
+        order: -1;
+        margin-bottom: 32px;
     }
     .steps {
         gap: 96px;
