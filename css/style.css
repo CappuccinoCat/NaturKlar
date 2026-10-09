@@ -469,6 +469,9 @@ body.menu-open {
     gap: 28px;
     margin-top: 57px;
 }
+.guide-swipe-hint {
+    display: none;
+}
 .guide-card {
     position: relative;
     min-height: 500px;
@@ -2854,6 +2857,44 @@ a.footer-link:active {
     }
     .page-advice .advice-next-steps .icon-card__content {
         max-width: none;
+    }
+}
+
+/* Guide- og overnatningskort kan swipes på mobil og tablet. */
+@media (max-width: 1000px) {
+    .guide-grid.guide-grid--swipe {
+        width: 100%;
+        max-width: none;
+        margin-inline: 0;
+        padding: 8px;
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        /* Efter mellemrummet er mindst 24 px af næste kort synligt. */
+        grid-auto-columns: min(360px, calc(100% - 40px));
+        gap: 16px;
+        align-items: stretch;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scroll-padding-inline: 8px;
+        scrollbar-width: thin;
+    }
+    .guide-grid--swipe .sleep-options__pair {
+        display: contents;
+    }
+    .guide-grid--swipe .guide-card {
+        width: auto;
+        min-width: 0;
+        max-width: none;
+        scroll-snap-align: start;
+    }
+    .guide-grid--swipe:focus-visible {
+        outline-offset: 2px;
+    }
+    .guide-swipe-hint {
+        display: block;
+        margin-top: var(--space-sm);
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 
