@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Her er en række begynderfejl og gode råd enhver vandrer bør undgå.">
+    <title>Gode råd – NaturKlar</title>
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/atkinson-hyperlegible-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="page-advice">
+    <a class="skip-link" href="#hero-heading">Spring til indhold</a>
+    <div data-component="header"></div>
+
+    <main id="indhold">
+        <section class="hero advice-hero" aria-labelledby="hero-heading">
+            <div class="hero__background" aria-hidden="true"></div>
+            <div class="container hero__content">
+                <nav class="eyebrow breadcrumb" aria-label="Brødkrummesti">
+                    <a href="index.html">Hjem</a><span aria-hidden="true"> / </span><span aria-current="page">Gode råd</span>
+                </nav>
+                <h1 class="hero__heading" id="hero-heading" tabindex="-1">6 typiske begynderfejl<br>i friluftslivet</h1>
+                <p class="hero__description">Her er en række begynderfejl og gode råd enhver vandrer bør undgå.</p>
+            </div>
+            <div class="section-edge advice-hero__edge" aria-hidden="true"></div>
+        </section>
+
+        <section class="advice-mistakes" aria-label="Seks typiske begynderfejl">
+            <div class="container advice-grid">
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">For tung rygsæk</h2>
+                        <p>Ekstra udstyr bliver hurtigt til mere vægt. Start med det nødvendige.</p>
+                    </div>
+                </article>
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">Du sparer på fodtøjet</h2>
+                        <!-- Desktopteksten bruges også på mobil; mobil-Figma har en tekst om soveposer her. -->
+                        <p>Sko er det første, der er værd at bruge penge på. Gå dine egne til, før du tager afsted.</p>
+                    </div>
+                </article>
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">Glemmer kulden fra jorden</h2>
+                        <p>Selv en god sovepose bliver kold, hvis underlaget ikke isolerer. Tag også varmt tøj med til natten.</p>
+                    </div>
+                </article>
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">Du har valgt bomuld</h2>
+                        <p>Bomuld holder på fugten og gør dig kold. Vælg uld eller syntetisk tøj, og tag det på i lag.</p>
+                    </div>
+                </article>
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">Starter for hurtigt</h2>
+                        <p>Mange begyndere går for stærkt fra start og løber tør for energi. Gå i et roligt tempo, og hold korte pauser.</p>
+                    </div>
+                </article>
+                <article class="icon-card icon-card--outlined advice-card">
+                    <span class="icon-card__number" aria-hidden="true">i</span>
+                    <div class="icon-card__content">
+                        <h2 class="icon-card__heading">Ingen lys med</h2>
+                        <p>Mørket kommer tidligt, så lygten skal være med. Har du glemt en lygte, har de fleste mobiler en lommelygte.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="advice-faq" id="faq" aria-labelledby="faq-heading">
+            <div class="container advice-faq__layout">
+                <div class="section-heading advice-faq__heading">
+                    <h2 id="faq-heading">Ofte stillede spørgsmål</h2>
+                </div>
+                <div class="advice-faq__image">
+                    <img src="assets/images/faellesskab-i-skoven.jpg" width="2731" height="4096" alt="Tre personer holder pause sammen i skoven." loading="lazy">
+                </div>
+                <!-- Svarene er hentet fra Text-egenskaberne på de seks FAQ-instanser i Figma. -->
+                <div class="faq-list">
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Kan jeg tage børn med på tur?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Ja. Der er ingen fast minimumsalder, men til den første sheltertur er børn fra ca. 4–5 år ofte et godt udgangspunkt. Vælg en kort tur, mildt vejr og et shelter tæt på parkering og toilet.</p>
+                        </div>
+                    </details>
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Hvad er reglerne med hund?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Du må gerne tage din hund med, men den skal være i snor i skoven.</p>
+                        </div>
+                    </details>
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Skal jeg booke et shelter, eller hvad betyder først-til-mølle?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Det afhænger af shelteret. Nogle shelters kan bookes på forhånd, mens andre fungerer efter først-til-mølle-princippet. Tjek altid den enkelte shelterplads, inden du tager afsted.</p>
+                            <p>På Naturstyrelsens bookbare shelters giver en booking fortrinsret til selve shelteret – ikke til hele området.</p>
+                        </div>
+                    </details>
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Hvad hvis shelteret allerede er optaget?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Ved et først-til-mølle-shelter kan andre have taget pladsen før dig. Hav derfor gerne en alternativ shelterplads i nærheden, som en plan B.</p>
+                            <p>På mange af Naturstyrelsens primitive overnatningspladser må du også slå dit eget telt op ved siden af, hvis shelteret er fyldt.</p>
+                        </div>
+                    </details>
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Er der toilet og drikkevand ved shelteret?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Ikke nødvendigvis. Nogle shelterpladser har både toilet og drikkevand, mens andre ikke har nogen af delene.</p>
+                            <p>Tjek faciliteterne på den enkelte plads inden turen, og medbring vand, hvis du er i tvivl.</p>
+                        </div>
+                    </details>
+                    <details class="packing-accordion faq-item">
+                        <summary class="packing-accordion__trigger faq-item__trigger">
+                            <h3>Hvor længe må man blive i et shelter?</h3>
+                            <span class="packing-accordion__icon" aria-hidden="true">
+                                <img class="packing-accordion__plus" src="assets/icons/faq-plus.svg" width="24" height="24" alt="">
+                                <img class="packing-accordion__minus" src="assets/icons/faq-minus.svg" width="24" height="24" alt="">
+                            </span>
+                        </summary>
+                        <div class="packing-accordion__panel faq-item__panel">
+                            <p>Det er forskelligt afhængigt af hvem der forvalter området. Som udgangspunkt må du:</p>
+                            <ul>
+                                <li>Blive op til 2 nætter samme sted ved Naturstyrelsens primitive overnatningssteder</li>
+                                <li>Blive én nat samme sted på fri teltning områder</li>
+                                <li>Ved bookbare shelters må du blive der i det tidsrum, du har booket.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="advice-next-steps" aria-labelledby="next-steps-heading">
+            <div class="section-edge advice-next-steps__edge" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Efter første tur</p>
+                    <h2 id="next-steps-heading">Hvad er dit næste skridt?</h2>
+                </div>
+                <ul class="advice-next-steps__grid">
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/naeste-skridt-flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Prøv en ny årstid</h3>
+                            <p>Samme tur føles helt anderledes i en anden sæson.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/naeste-skridt-flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Prøv to nætter</h3>
+                            <p>Gå lidt længere, og sov to forskellige steder.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/naeste-skridt-flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Lær bålmad</h3>
+                            <p>Fra snobrød til fisk, du selv har fanget.</p>
+                        </div>
+                    </li>
+                    <li class="icon-card icon-card--outlined">
+                        <span class="icon-card__icon" aria-hidden="true"><img src="assets/icons/naeste-skridt-flueben.svg" width="24" height="24" alt=""></span>
+                        <div class="icon-card__content">
+                            <h3 class="icon-card__heading">Byg grejet op over tid</h3>
+                            <p>Køb det, du savnede, ikke alt på én gang.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <noscript><p class="container">Aktivér JavaScript for at indlæse fælles navigation og footer.</p></noscript>
+</body>
+</html>
