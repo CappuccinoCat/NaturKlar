@@ -259,6 +259,9 @@ button, a {
 .site-header {
     background: var(--color-beige);
 }
+.site-header.is-scrolled {
+    box-shadow: 0 25px 50px -12px rgb(140 136 127 / 40%);
+}
 .site-header__inner {
     min-height: var(--header-height);
     display: flex;
@@ -651,6 +654,9 @@ a.footer-link:active {
     .guide-card h3 {
         font-size: 28px;
     }
+    .guide-card__image--packing img {
+        object-position: center 60%;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -714,6 +720,22 @@ a.footer-link:active {
     .site-footer__groups {
         grid-template-columns: auto auto auto;
         gap: 32px;
+    }
+}
+
+/* Den åbne menu flugter med headeren på tablet og mindre desktopskærme. */
+@media (min-width: 701px) and (max-width: 1100px) {
+    .mobile-menu__top {
+        min-height: var(--header-height);
+        gap: var(--space-md);
+        padding: 0 var(--gutter);
+    }
+    .mobile-menu__top .brand {
+        font-variation-settings: "opsz" 14, "wdth" 100;
+        letter-spacing: -0.32px;
+    }
+    .mobile-menu__navigation {
+        padding-inline: var(--gutter);
     }
 }
 
@@ -808,6 +830,9 @@ a.footer-link:active {
     }
     .guide-grid {
         max-width: none;
+    }
+    .guide-card__image--walking img {
+        object-position: center 70%;
     }
 }
 

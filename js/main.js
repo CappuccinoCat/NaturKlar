@@ -10,6 +10,16 @@ async function loadComponent(name) {
 }
 
 function initializeNavigation() {
+    const header = document.querySelector(".site-header");
+
+    // Vis kun skyggen, når siden er scrollet væk fra toppen.
+    function updateHeaderShadow() {
+        header.classList.toggle("is-scrolled", window.scrollY > 0);
+    }
+
+    window.addEventListener("scroll", updateHeaderShadow, { passive: true });
+    updateHeaderShadow();
+
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll(".site-header a[href]").forEach(link => {
         if (link.getAttribute("href") === currentPage) {
