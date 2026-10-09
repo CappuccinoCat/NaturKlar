@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="En komplet pakkeliste for begyndere til én nat i naturen. Kryds udstyret af, se ekstra grej til børn, og print pakkelisten.">
+    <title>Pakkeliste til sheltertur – NaturKlar</title>
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/atkinson-hyperlegible-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="page-packing">
+    <a class="skip-link" href="#hero-heading">Spring til indhold</a>
+    <div data-component="header"></div>
+
+    <main id="indhold">
+        <section class="packing-hero" aria-labelledby="hero-heading">
+            <div class="packing-hero__background" aria-hidden="true"></div>
+            <div class="container packing-hero__content">
+                <nav class="eyebrow breadcrumb" aria-label="Brødkrummesti">
+                    <a href="index.html">Hjem</a><span aria-hidden="true"> / </span><span aria-current="page">Trin 3: Pakkeliste</span>
+                </nav>
+                <h1 id="hero-heading" tabindex="-1">En komplet pakkeliste<br class="desktop-label"> for begyndere</h1>
+                <p>Her er en komplet liste over det absolut nødvendigste udstyr til én enkelt nat. Du behøver ikke det dyreste udstyr for at få en tryg og god tur.</p>
+            </div>
+            <div class="section-edge packing-hero__edge" aria-hidden="true"></div>
+        </section>
+
+        <div class="container packing-list" data-packing-list>
+            <div class="packing-list__toolbar">
+                <button class="packing-list__action" type="button" data-packing-print>
+                    <img src="assets/icons/print.svg" width="24" height="24" alt="">
+                    <span>Print pakkelisten</span>
+                </button>
+                <button class="packing-list__action packing-list__action--reset" type="button" data-packing-reset>
+                    <span class="packing-list__reset-icon" aria-hidden="true"><img src="assets/icons/nulstil.svg" width="22.0811" height="20.9516" alt=""></span>
+                    <span>Nulstil alle afkrydsninger</span>
+                </button>
+            </div>
+
+            <div class="packing-list__columns">
+                <section class="packing-list__group" aria-labelledby="essential-heading">
+                    <h2 id="essential-heading">Det nødvendige</h2>
+                    <div class="packing-list__categories">
+                        <section class="checklist__category" aria-labelledby="clothing-heading">
+                            <h3 id="clothing-heading">Beklædning</h3>
+                            <ul class="checklist">
+                                <li><label class="checklist__item" for="regntoej"><input id="regntoej" type="checkbox"><span>Regntøj eller vindtæt jakke</span></label></li>
+                                <li><label class="checklist__item" for="varm-troeje"><input id="varm-troeje" type="checkbox"><span>Varm trøje i uld eller fleece</span></label></li>
+                                <li><label class="checklist__item" for="toert-toej"><input id="toert-toej" type="checkbox"><span>Ekstra tørt tøj, hue og sokker</span></label></li>
+                                <li><label class="checklist__item" for="sko"><input id="sko" type="checkbox"><span>Gode sko at gå i</span></label></li>
+                            </ul>
+                        </section>
+                        <section class="checklist__category" aria-labelledby="food-heading">
+                            <h3 id="food-heading">Mad og vand</h3>
+                            <ul class="checklist">
+                                <li><label class="checklist__item" for="vand"><input id="vand" type="checkbox"><span>Vandflasker</span></label></li>
+                                <li><label class="checklist__item" for="mad"><input id="mad" type="checkbox"><span>Aftensmad og morgenmad</span></label></li>
+                                <li><label class="checklist__item" for="snacks"><input id="snacks" type="checkbox"><span>Snacks</span></label></li>
+                            </ul>
+                        </section>
+                        <section class="checklist__category" aria-labelledby="practical-heading">
+                            <h3 id="practical-heading">Lys og praktiske ting</h3>
+                            <ul class="checklist">
+                                <li><label class="checklist__item" for="lommelygte"><input id="lommelygte" type="checkbox"><span>Lommelygte<br> (brug evt. din telefon)</span></label></li>
+                                <li><label class="checklist__item" for="tandboerste"><input id="tandboerste" type="checkbox"><span>Tandbørste og tandpasta</span></label></li>
+                                <li><label class="checklist__item" for="toiletpapir"><input id="toiletpapir" type="checkbox"><span>Toiletpapir og håndsprit</span></label></li>
+                                <li><label class="checklist__item" for="foerstehjaelp"><input id="foerstehjaelp" type="checkbox"><span>Lille førstehjælpskit<br> (plaster, forbinding, rens)</span></label></li>
+                                <li><label class="checklist__item" for="mobil"><input id="mobil" type="checkbox"><span>Opladet mobil + powerbank</span></label></li>
+                                <li><label class="checklist__item" for="skraldeposer"><input id="skraldeposer" type="checkbox"><span>Skraldeposer til affald og tøj</span></label></li>
+                                <li><label class="checklist__item" for="rutekort"><input id="rutekort" type="checkbox"><span>Et printet rutekort</span></label></li>
+                            </ul>
+                        </section>
+                        <section class="checklist__category" aria-labelledby="sleep-heading">
+                            <h3 id="sleep-heading">Søvn</h3>
+                            <ul class="checklist">
+                                <li><label class="checklist__item" for="rygsaek"><input id="rygsaek" type="checkbox"><span>Rygsæk</span></label></li>
+                                <li><label class="checklist__item" for="sovepose"><input id="sovepose" type="checkbox"><span>Sovepose</span></label></li>
+                                <li><label class="checklist__item" for="liggeunderlag"><input id="liggeunderlag" type="checkbox"><span>Liggeunderlag</span></label></li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="packing-list__group packing-list__group--optional" aria-labelledby="optional-heading">
+                    <h2 id="optional-heading">Godt at have med<br> men ikke nødvendigt</h2>
+                    <ul class="checklist">
+                        <li><label class="checklist__item" for="siddeunderlag"><input id="siddeunderlag" type="checkbox"><span>Siddeunderlag</span></label></li>
+                        <li><label class="checklist__item" for="termokande"><input id="termokande" type="checkbox"><span>Termokande til kaffe</span></label></li>
+                        <li><label class="checklist__item" for="taendstikker"><input id="taendstikker" type="checkbox"><span>Tændstikker/tændstål</span></label></li>
+                        <li><label class="checklist__item" for="bestik"><input id="bestik" type="checkbox"><span>Krus, tallerken og bestik</span></label></li>
+                        <li><label class="checklist__item" for="kniv"><input id="kniv" type="checkbox"><span>Skarp kniv</span></label></li>
+                        <li><label class="checklist__item" for="hovedpude"><input id="hovedpude" type="checkbox"><span>Lille hovedpude</span></label></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Summary er kun togglen; børnenes afkrydsninger ligger udenfor. -->
+            <details class="packing-accordion">
+                <summary class="packing-accordion__trigger">
+                    <h2>Skal der børn med?</h2>
+                    <span class="packing-accordion__icon" aria-hidden="true">
+                        <img class="packing-accordion__plus" src="assets/icons/accordion-plus.svg" width="54" height="54" alt="">
+                        <img class="packing-accordion__minus" src="assets/icons/accordion-minus.svg" width="54" height="24" alt="">
+                    </span>
+                </summary>
+                <ul class="checklist packing-accordion__panel">
+                    <li><label class="checklist__item" for="barn-varmt-toej"><input id="barn-varmt-toej" type="checkbox"><span>Ekstra varmt lag tøj pr. barn</span></label></li>
+                    <li><label class="checklist__item" for="barn-sovepose"><input id="barn-sovepose" type="checkbox"><span>Sovepose til børn</span></label></li>
+                    <li><label class="checklist__item" for="barn-hue"><input id="barn-hue" type="checkbox"><span>Hue og vanter</span></label></li>
+                    <li><label class="checklist__item" for="barn-snacks"><input id="barn-snacks" type="checkbox"><span>Ekstra snacks og noget varmt at drikke</span></label></li>
+                    <li><label class="checklist__item" for="barn-sovedyr"><input id="barn-sovedyr" type="checkbox"><span>Evt. sovedyr eller andet velkendt</span></label></li>
+                    <li><label class="checklist__item" for="barn-lygte"><input id="barn-lygte" type="checkbox"><span>Barnets egen pandelampe eller lommelygte</span></label></li>
+                </ul>
+            </details>
+        </div>
+
+        <section class="first-trip packing-cta" aria-labelledby="packing-cta-heading">
+            <div class="first-trip__image">
+                <img src="assets/images/shelter-begynderguide.png" width="1600" height="1200" alt="Et åbent træshelter med tag og soveplads i skoven." loading="lazy">
+            </div>
+            <div class="first-trip__content">
+                <div class="section-heading section-heading--light">
+                    <p class="eyebrow">Klar til et eventyr</p>
+                    <h2 id="packing-cta-heading">Du er klar til din første tur! Hvad skal der ske bagefter?</h2>
+                </div>
+                <p class="first-trip__description">Hvis du har mod på at gøre friluftslivet til en hobby, har vi nogle gode råd og typiske fejl til nybegyndere.</p>
+                <a class="btn btn--primary btn--on-olive" href="gode-raad.html">Gå til gode råd</a>
+            </div>
+            <div class="section-edge section-edge--cta" aria-hidden="true"></div>
+        </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <noscript><p class="container">Aktivér JavaScript for at indlæse fælles navigation og footer samt bruge print og nulstilling.</p></noscript>
+</body>
+</html>

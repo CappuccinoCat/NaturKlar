@@ -2021,3 +2021,503 @@ a.footer-link:active {
         padding-right: 12.5px;
     }
 }
+
+/* Pakkeliste – nye komponenter og små variationer af den fælles CTA. */
+.page-packing {
+    --color-ochre-text: #6c461f; /* Samme læsbare tekstvariant som de andre undersider. */
+    --color-checklist: #28374a;
+    --color-children-surface: #d4d7c6;
+}
+.page-packing .site-navigation__link[aria-current="page"] {
+    color: var(--color-olive);
+}
+.packing-hero {
+    position: relative;
+    min-height: 691px;
+}
+.packing-hero__background {
+    position: absolute;
+    inset: 0 0 49px;
+    background: linear-gradient(rgb(241 239 235 / 82%), rgb(241 239 235 / 82%)),
+        url("../assets/images/pak-udstyret.png") center 32.7044% / 100% auto no-repeat;
+}
+.packing-hero__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+    padding-block: 158px 120px;
+}
+.packing-hero h1 {
+    max-width: 1046px;
+    scroll-margin-top: calc(var(--header-height) + var(--space-md));
+}
+.packing-hero__content > p {
+    max-width: 553.494px;
+}
+.packing-hero__edge {
+    inset: auto -5px 0 0;
+    height: 109.674px;
+    background: url("../assets/icons/hero-kant.svg") 0 0 / 100% 100% no-repeat;
+}
+
+.packing-list {
+    padding-top: 53px;
+    padding-bottom: 240px;
+}
+.packing-list__toolbar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-left: 13px;
+    margin-bottom: 30px;
+}
+.packing-list__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 46px;
+    padding: 10px 0;
+    background: transparent;
+    border: 0;
+    color: var(--color-ink);
+    font-size: 14px;
+    line-height: var(--line-body);
+    font-weight: var(--weight-bold);
+    text-align: left;
+    cursor: pointer;
+}
+.packing-list__action > span:last-child {
+    text-decoration: underline;
+    text-underline-position: from-font;
+}
+.packing-list__action > img,
+.packing-list__reset-icon {
+    flex: 0 0 24px;
+}
+.packing-list__action--reset {
+    /* En lille kontrastkorrektion fra Figma (65%) gør den lille tekst AA-læsbar. */
+    color: rgb(35 47 62 / 70%);
+}
+.packing-list__reset-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg) scaleY(-1);
+}
+.packing-list__action:hover,
+.packing-list__action:active {
+    color: var(--color-ochre-text);
+}
+.packing-list__columns {
+    display: grid;
+    grid-template-columns: minmax(0, 623fr) minmax(0, 620fr);
+    align-items: start;
+    gap: 37px;
+}
+.packing-list__group {
+    min-width: 0;
+    padding: 43px 29px;
+    border: 1px solid var(--color-ink);
+    border-radius: 30px;
+}
+.packing-list__group > h2 {
+    text-box: trim-both cap alphabetic;
+}
+.packing-list__categories {
+    margin-top: 68px;
+}
+.checklist__category > h3 {
+    margin-left: 5px;
+    font-family: var(--font-body);
+    font-size: 20px;
+    line-height: var(--line-body);
+    letter-spacing: 0;
+    color: var(--color-olive);
+}
+.checklist__category + .checklist__category {
+    margin-top: 70px;
+}
+.checklist__category:nth-child(3) {
+    margin-top: 37px;
+}
+.checklist__category:nth-child(4) {
+    margin-top: 52px;
+}
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.checklist__category > .checklist {
+    padding-left: 32px;
+    margin-top: 27px;
+}
+.checklist__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 50px;
+    padding-block: 10px;
+    color: var(--color-checklist);
+    cursor: pointer;
+}
+.checklist__item > input {
+    appearance: none;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 2px solid var(--color-checklist);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+.checklist__item > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.checklist__item > input:checked {
+    border: 0;
+    background: url("../assets/icons/afkrydsning.svg") center / 30px 30px no-repeat;
+}
+.checklist__item > input:checked + span {
+    color: var(--color-ink);
+    font-weight: var(--weight-bold);
+}
+.packing-list__group--optional {
+    min-height: 734px;
+    margin-top: -4px;
+    border-color: var(--color-olive);
+    border-style: dashed;
+    /* Figma-konturens 9/9-stipling og hjørner bevares med en original SVG. */
+    border-image: url("../assets/icons/pakkeliste-stiplet-kant.svg") 31 / 31px / 1px stretch;
+}
+.packing-list__group--optional > h2 {
+    color: rgb(35 47 62 / 81%);
+}
+.packing-list__group--optional > .checklist {
+    padding-left: 10px;
+    margin-top: 39px;
+}
+
+/* Native details bevarer checkbox-tilstand og flytter resten af siden ved åbning. */
+.packing-accordion {
+    width: min(100%, 842px);
+    margin-top: 174px;
+    margin-left: -3px;
+    padding: 23px 16px 23px 26px;
+    border: 1px solid var(--color-ink);
+    border-radius: 30px;
+    background: var(--color-children-surface);
+}
+.packing-accordion__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    list-style: none;
+    cursor: pointer;
+}
+.packing-accordion__trigger::-webkit-details-marker {
+    display: none;
+}
+.packing-accordion__trigger > h2 {
+    font-family: var(--font-body);
+    font-size: 40px;
+    line-height: 26px;
+    font-weight: var(--weight-bold);
+    letter-spacing: 0;
+}
+.packing-accordion__icon {
+    display: flex;
+    align-items: center;
+    flex: 0 0 54px;
+    min-height: 54px;
+}
+.packing-accordion__minus,
+.packing-accordion[open] .packing-accordion__plus {
+    display: none;
+}
+.packing-accordion[open] .packing-accordion__minus {
+    display: block;
+}
+.packing-accordion[open] .packing-accordion__icon {
+    min-height: 24px;
+}
+.packing-accordion__panel {
+    gap: 44px;
+    margin-top: 44px;
+    padding-inline: 30px;
+}
+.packing-cta .first-trip__content {
+    justify-content: start;
+    padding-top: 107px;
+    padding-bottom: 55px;
+}
+.packing-cta .eyebrow {
+    color: var(--color-sage);
+}
+.packing-cta .first-trip__description {
+    margin-bottom: 32px;
+}
+.packing-cta .section-edge--cta {
+    top: -38px;
+}
+
+/* Brug samme mellemstørrelser og mobilgrænse som resten af NaturKlar. */
+@media (min-width: 701px) and (max-width: 1300px) {
+    .packing-hero h1 {
+        font-size: clamp(64px, 6.67vw, 96px);
+        line-height: 1;
+    }
+    .packing-hero__background {
+        background-size: cover;
+    }
+    .packing-list__group > h2 {
+        font-size: clamp(32px, 3.34vw, 48px);
+        line-height: 1.083334;
+    }
+    .packing-list__group {
+        padding-inline: 24px;
+    }
+    .checklist__category > .checklist {
+        padding-left: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .packing-list__columns {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+    .packing-list__group--optional {
+        min-height: 0;
+        margin-top: 0;
+    }
+    .packing-accordion {
+        margin-top: 32px;
+        margin-left: 0;
+    }
+    .packing-list {
+        padding-bottom: 80px;
+    }
+}
+@media (max-width: 700px) {
+    .packing-hero {
+        min-height: 422px;
+    }
+    .packing-hero__background {
+        bottom: 0;
+        background-position: center top;
+        background-size: auto, 179.1% auto;
+    }
+    .packing-hero__content {
+        width: calc(100% - 48px);
+        margin-left: 30px;
+        gap: 24px;
+        padding-block: 46px 67px;
+    }
+    .packing-hero h1 {
+        text-box: trim-both cap alphabetic;
+    }
+    .packing-hero__edge {
+        bottom: -24px;
+        right: auto;
+        width: max(100%, 493px);
+        height: 62px;
+        background-image: url("../assets/icons/hero-kant-mobil.svg");
+    }
+    .packing-list {
+        width: calc(100% - 40px);
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+    .packing-list__toolbar {
+        justify-content: space-between;
+        gap: 8px;
+        margin-left: 0;
+        margin-bottom: 28px;
+    }
+    .packing-list__action {
+        font-size: 12px;
+    }
+    .packing-list__group {
+        padding: 28px 20px;
+    }
+    .packing-list__group > h2 {
+        font-size: var(--text-h3);
+        line-height: var(--line-h3);
+        font-weight: var(--weight-bold);
+        text-box: normal;
+    }
+    .packing-list__categories {
+        margin-top: 28px;
+    }
+    .checklist__category > h3 {
+        margin-left: 0;
+    }
+    .checklist__category + .checklist__category {
+        margin-top: 28px;
+    }
+    .checklist__category > .checklist {
+        padding-left: 0;
+        margin-top: 12px;
+    }
+    .packing-list__group--optional > .checklist {
+        padding-left: 0;
+        margin-top: 24px;
+    }
+    .packing-list__group--optional {
+        padding: 27px 19px;
+        border-image-source: url("../assets/icons/pakkeliste-stiplet-kant-mobil.svg");
+    }
+    .packing-accordion__trigger > h2 {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.015em;
+    }
+    .packing-accordion__panel {
+        gap: 28px;
+        margin-top: 28px;
+        padding-inline: 0;
+    }
+    .packing-cta .first-trip__content {
+        padding: 50px 24px 40px;
+    }
+    .packing-cta .section-heading {
+        gap: 32px;
+    }
+    .packing-cta .section-heading h2 {
+        padding-bottom: 0;
+    }
+    .packing-cta .section-heading .eyebrow {
+        padding-left: 0;
+    }
+    .packing-cta .first-trip__description {
+        margin: 32px 0 28px;
+    }
+    .packing-cta .btn {
+        width: auto;
+    }
+    .packing-cta .section-edge--cta {
+        top: 24px;
+    }
+}
+@media (forced-colors: active) {
+    .checklist__item > input {
+        appearance: auto;
+    }
+}
+
+/* Et navngivet A4-layout begrænser printreglerne til pakkelistesiden. */
+@page naturklar-packing {
+    size: A4;
+    margin: 12mm;
+}
+@media print {
+    .page-packing {
+        page: naturklar-packing;
+        background: white;
+        color: black;
+        font-size: 11pt;
+        line-height: 15pt;
+    }
+    .page-packing :is([data-component], .skip-link, .packing-hero, .packing-list__toolbar, .packing-cta, noscript) {
+        display: none;
+    }
+    .page-packing main {
+        overflow: visible;
+    }
+    .page-packing .packing-list {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    .page-packing .packing-list__columns {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 8mm;
+    }
+    .page-packing .packing-list__group {
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-image: none;
+    }
+    .page-packing .packing-list__group > h2 {
+        font-size: 17pt;
+        line-height: 20pt;
+        color: black;
+        text-box: normal;
+        break-after: avoid;
+    }
+    .page-packing .packing-list__categories {
+        margin-top: 5mm;
+    }
+    .page-packing .checklist__category {
+        break-inside: avoid;
+    }
+    .page-packing .checklist__category + .checklist__category {
+        margin-top: 4mm;
+    }
+    .page-packing .checklist__category > h3 {
+        margin: 0;
+        color: black;
+        font-size: 12pt;
+        line-height: 16pt;
+        break-after: avoid;
+    }
+    .page-packing .checklist {
+        gap: 1mm;
+        padding: 0;
+        margin-top: 2mm;
+    }
+    .page-packing .checklist__item {
+        gap: 2mm;
+        min-height: 7mm;
+        padding-block: 1mm;
+        color: black;
+        break-inside: avoid;
+    }
+    .page-packing .checklist__item > input {
+        flex-basis: 5mm;
+        width: 5mm;
+        height: 5mm;
+        border-width: 1pt;
+        border-radius: 1.3mm;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+    .page-packing .checklist__item > input:checked {
+        border: 0;
+        background-size: 5mm 5mm;
+    }
+    .page-packing .packing-accordion {
+        width: auto;
+        padding: 0;
+        margin: 6mm 0 0;
+        background: white;
+        border: 0;
+    }
+    .page-packing .packing-accordion:not([open]) {
+        display: none;
+    }
+    .page-packing .packing-accordion__trigger > h2 {
+        font-size: 16pt;
+        line-height: 20pt;
+    }
+    .page-packing .packing-accordion__icon {
+        display: none;
+    }
+    .page-packing .packing-accordion__trigger {
+        break-after: avoid;
+    }
+}

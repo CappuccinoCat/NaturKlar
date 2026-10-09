@@ -80,4 +80,21 @@ async function initializePage() {
     }
 }
 
+function initializePackingList() {
+    const packingList = document.querySelector("[data-packing-list]");
+    if (!packingList) return;
+
+    packingList.querySelector("[data-packing-print]").addEventListener("click", () => {
+        window.print();
+    });
+
+    // Søg i hele pakkelisten, også den lukkede børneaccordion.
+    packingList.querySelector("[data-packing-reset]").addEventListener("click", () => {
+        packingList.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    });
+}
+
 initializePage();
+initializePackingList();
