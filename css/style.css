@@ -1597,11 +1597,25 @@ a.footer-link:active {
     line-height: 18px;
     text-underline-position: from-font;
 }
-.sleep-card__links .text-link:hover {
+.sleep-card__links .text-link:hover,
+.sleep-card__links .text-link:active {
     color: var(--color-beige);
 }
 .sleep-card--recommended :focus-visible {
     outline-color: var(--color-beige);
+}
+
+/* Den originale SVG bruges som maske, så link og ikon har samme farve i alle tilstande. */
+.page-beginner :is(.sleep-card__links .text-link, .beginner-rules__link, .site-footer__group--external .footer-link) > :is(picture, .icon) {
+    display: none;
+}
+.page-beginner :is(.sleep-card__links .text-link, .beginner-rules__link, .site-footer__group--external .footer-link)::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    background-color: currentColor;
+    mask: url("../assets/icons/eksternt-link-regler.svg") center / contain no-repeat;
 }
 
 .beginner-rules {
