@@ -472,6 +472,15 @@ body.menu-open {
     border: 1px solid var(--color-stroke);
     border-radius: var(--radius-card);
 }
+/* Kun kort med links forstørres ved hover i desktopvisning. */
+@media (min-width: 1001px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .guide-card:is(a[href], :has(a[href])) {
+        transition: transform 180ms ease-out;
+    }
+    .guide-card:is(a[href], :has(a[href])):hover {
+        transform: scale(1.02);
+    }
+}
 .guide-card__image {
     height: 238px;
     overflow: hidden;
