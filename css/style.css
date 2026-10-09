@@ -2623,6 +2623,7 @@ a.footer-link:active {
 .page-advice .advice-faq {
     background: var(--color-faq-surface);
     padding: 156px 0 271px;
+    scroll-margin-top: var(--header-height);
 }
 .page-advice .advice-faq__layout {
     display: grid;
