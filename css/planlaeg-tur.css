@@ -216,8 +216,8 @@
     .planning-hero__background {
         bottom: 27px;
         background-position: center top;
-        /* Bevar Figma-beskæringen, mens baggrunden slutter under SVG-kanten. */
-        background-size: auto calc(119.06% + 32.146px);
+        /* Som på forsiden dækker billedet hele baggrundens bredde og højde. */
+        background-size: cover;
     }
     .planning-hero__content {
         width: calc(100% - 40px);
@@ -231,7 +231,7 @@
     }
     .planning-hero__edge {
         right: auto;
-        width: 493px;
+        width: max(100%, 493px);
         height: 62px;
         background-image: url("../assets/icons/hero-kant-mobil.svg");
     }
@@ -302,7 +302,7 @@
         background-image: none;
     }
     .next-step__edge {
-        width: 502px;
+        width: max(calc(100% + 81px), 502px);
         height: 74px;
         left: -81px;
         top: -36px;
